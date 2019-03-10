@@ -1,3 +1,103 @@
-<p>
-  user-profile works!
-</p>
+    <div class="container user-profile formStyle">
+    <form method="post" >
+        <!--- This row is divided in 4-6-2 column type grid withe responsiveness -->
+
+        <div class="row">   
+            <div class="col-md-4">
+
+                <!-- Snippet for Image Uploader-->
+
+               <div class="user-img">
+                    <img src="../../assets/images/user.png" alt=""/>
+                    <div class="file btn btn-lg btn-primary">
+                         Change Picture
+                        <input type="file" name="file"/>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="headerProfile">
+                            <h2>
+                                Ravi Zala
+                            </h2>
+                            <br/>
+                            <br/>
+                            <br/>
+
+                     <!-- Snippet for naigation tabs like About, Preferences, Change Password using UL and LI tags-->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="preferences-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Preferences</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="password-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Change Passwrord</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                
+            </div>
+         </div>
+             <!--- This row is divided in 4-8 column type grid withe responsiveness -->
+         <div class="row">
+             <div class="col-md-4">    
+            </div>
+
+            <!-- This column is useful for the content of the tabs -->
+            <div class="col-md-8">
+                <div class="tab-content preferences-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Banner Id</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>B00805073</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Ravi Zala</p>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="col-md-6">
+                                <label>Phone</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>123-456-7890</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>ravizala100@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="preferences-tab">
+                    <div class="row"></div>
+
+               </div>
+               <br/>
+
+               <input type="submit" class="profile-edit-btn btn-primary" name="btnAddMore" value="Edit Profile"/>
+            </div>
+        </div>
+    </form>           
+</div>
+
