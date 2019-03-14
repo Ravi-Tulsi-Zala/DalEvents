@@ -1,47 +1,51 @@
+
 <div class="container-fluid bgStyle">
 
-	<div class="row">
-		<div class="col-md-4 col-sm-4 col-xs-12"></div>
-		<div class="col-md-4 col-sm-4 col-xs-12">
-
-			<form  method="POST" name="logform" action="index.html"  onsubmit="return validate();" class="formStyle">
-				<h1>DalEvents Login</h1>
-				<br/>
-			 	<div class="form-group input-group">
-			    	<div class="input-group-prepend">
-					    <span class="input-group-text" id="emailIcon"> <i class="fa fa-envelope"></i> </span>
-					 </div>
-			        <input class="form-control" name="email" placeholder="Email address" type="email">
-			        
-			    </div> 
-			    <div id="email_error" class="val_error"></div>
-
-			    <br/>
-
-			    <div class="form-group input-group">
-			    	<div class="input-group-prepend">
-					    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-					 </div>
-			        <input class="form-control" name="banner" placeholder="BannerID" type="text">
-			        
-			    </div> 
-			     <div id="banner_error" class="val_error"></div>
-			    <br/>
-
-			  	<div class="form-group input-group">
-			    	<div class="input-group-prepend">
-					    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-12"></div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+	
+				<!--<form  method="POST" name="logform" action="index.html"  onsubmit="return validate();" class="formStyle">-->
+				<form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading" class="formStyle">
+	
+					<h1>DalEvents Login</h1>
+					<br/>
+					 <div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="emailIcon"> <i class="fa fa-envelope"></i> </span>
+						 </div>
+						<input class="form-control" name="email" placeholder="Email address" ngModel type="email" #emailInput="ngModel" required email>
+						
+					</div> 
+					<div id="email_error" class="val_error"></div>
+	
+					<br/>
+	
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+						 </div>
+						<input class="form-control" name="banner" placeholder="BannerID" type="text">
+						
+					</div> 
+					 <div id="banner_error" class="val_error"></div>
+					<br/>
+	
+					  <div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+						</div>
+						<input class="form-control" name="password" minlength="8" placeholder="Password" ngModel type="password" #passwordInput="ngModel" required>
+						 
 					</div>
-			        <input class="form-control" name="password" minlength="8" placeholder="Password" type="password">
-			         
-			    </div>
-			    <div id="pass_error" class="val_error"></div>
-			     
-			  	<div class="form-group form-check">
-			    	<input type="checkbox" class="form-check-input" id="exampleCheck1">
-			    	<label class="form-check-label" for="exampleCheck1" id="rememberLabel">Remember Me</label>
-			  	</div>
-			  	<div class="form-group">
-			        <button type="submit" class="btn btn-primary btn-block"> Log In </button>
-			    </div>   
-			</form>
+					<div id="pass_error" class="val_error"></div>
+					 
+					  <div class="form-group form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1">
+						<label class="form-check-label" for="exampleCheck1" id="rememberLabel">Remember Me</label>
+					  </div>
+					  <div class="form-group">
+						<button type="submit" class="btn btn-primary btn-block"> Log In </button>
+					</div>   
+				</form>
+	
