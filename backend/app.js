@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-//const loginRoutes = require('./routes/test');
+const loginRoutes = require('./routes/test');
 const userRoutes = require('./routes/user');
-
+const eventRoutes = require('./routes/events');
 
 //mongoose.connect('mongodb+srv://dalevents:dalevents@dalevents-evire.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
 mongoose
@@ -33,7 +33,7 @@ app.use((req, res, next) => {
     next();
 });
 
-//app.use('/test', loginRoutes);
+app.use('/test', loginRoutes);
 app.use('/login', userRoutes);
-
+app.use('/events', eventRoutes);
 module.exports = app;

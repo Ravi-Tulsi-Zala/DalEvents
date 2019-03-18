@@ -17,6 +17,8 @@ router.post('/login',(req,res,next)=>{
             });
         }
         fetchedUser = user;
+        console.log(fetchedUser);
+        console.log(req.body.password);
         return bcrypt.compare(req.body.password , user.password);
         }).then(result =>{
             console.log("result:::",result);
@@ -34,7 +36,8 @@ router.post('/login',(req,res,next)=>{
             console.log("token:::",token);
 
             res.status(200).json({
-                token:token
+                token:token,
+                expiresIn: 3600    
             });
         }).catch(err =>{
             console.log(err);

@@ -30,6 +30,18 @@ var userslogin = mongoose.Schema({
         unique: true,
         required:true,
         trim:true
+    },
+    image:{
+        type: Image,
+        unique: true,
+        required:false,
+        trim:true
+    },
+    category:{
+        type: String,
+        unique: true,
+        required:false,
+        trim:true
     }
 });
 module.exports = mongoose.model('user', userslogin);
