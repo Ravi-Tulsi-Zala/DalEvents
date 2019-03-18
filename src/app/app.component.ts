@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
   title = 'DalEvents';
   constructor(private authservice:AuthService){}
   ngOnInit(){
-
+    this.authservice.autoAuthUser();
   }
 }
