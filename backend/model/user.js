@@ -31,16 +31,14 @@ var userslogin = mongoose.Schema({
         required:true,
         trim:true
     },
-    image:{
-        type: Image,
-        unique: true,
-        required:false,
-        trim:true
-    },
     category:{
         type: String,
+        trim:true
+    },
+    banner_id:{
+        type: String,
         unique: true,
-        required:false,
+        required: true,
         trim:true
     }
 });

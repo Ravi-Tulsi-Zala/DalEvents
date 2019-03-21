@@ -18,13 +18,6 @@
 
 }
 
-
-.invalid
-{
-	border-color: #E9322D!important;
-	box-shadow: 0 0 6px #F8B9B7!important;
-}
-
 form h1
 {
 	color: #fff;
@@ -45,4 +38,11 @@ form h1
 #emailIcon
 {
 	font-size: small;
+}
+
+.center{
+	text-align: center;
+}
+.pb{
+	padding-bottom: 1em;
 }

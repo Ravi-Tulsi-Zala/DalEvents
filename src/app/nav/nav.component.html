@@ -1,50 +1,3 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-          <a class="nav-link" href="#">DalEvents <span class="sr-only">(current)</span></a>
-        </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item" *ngIf="!userIsAuthenticated">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
-      <li class="nav-item" *ngIf="userIsAuthenticated">
-        <a class="nav-link" (click)="onlogout()">Login Out</a>
-      </li>
-      <li class="nav-item" *ngIf="userIsAuthenticated">
-          <a class="nav-link" href="/user-profile">User Profile</a>
-      </li>
-      <li class="nav-item" *ngIf="!userIsAuthenticated">
-            <a class="nav-link" href="/event-details">Event Details</a>
-      </li>
-      <li class="nav-item" *ngIf="userIsAuthenticated">
-          <a class="nav-link" href="/create-event">Create Event</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-  <li class="dropdown nav-item active">
-    <a class="dropdown-toggle nav-item active" data-toggle="dropdown"  href="#">user-profile
-    <span class="nav-item active"></span></a>
-    <ul class="dropdown-menu">
-      <li ><a href="#">Create event</a></li>
-      <li><a href="#">How to buy tickets?</a></li>
-      <li><a href="#">How to cancel the ticket?</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#">Sign Out</a></li>
-        <li class="divider"></li>
-      <li><a href="#">Any other issue</a></li>
-    </ul>
-  </li>
-</nav> -->
 <nav class="boxtransition navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a class="navbar-brand" href="#"> <img src="../../assets/images/dalLogo.png" width="60" height="40" class="d-inline-block align-top" alt=""> DalEvents </a>
  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,6 +22,9 @@
       </li>
       <li>
         <a data-toggle="tab" class="nav-link" href="#help">Help</a>
+      </li>
+      <li>
+        <span data-toggle="tab" class="nav-link" *ngIf="userIsAuthenticated" href="#help">{{fname}}</span>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" *ngIf="!userIsAuthenticated">
