@@ -21,7 +21,9 @@ router.post('/',(req,res,next)=>{
         password: req.body.password,
         firstname: req.body.firstname,
         lastname: req.body.lastname,
-        email: req.body.email
+        email: req.body.email,
+        category : req.body.category,
+        banner_id :req.body.banner_id
     });
     login.save().then((docs)=>{
         res.send(docs);

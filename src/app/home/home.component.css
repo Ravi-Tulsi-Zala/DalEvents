@@ -274,8 +274,6 @@ margin-bottom:10px;
 	
 }
 
-
-
 .forever-color
 {
 	color:#2e6da4;
@@ -287,4 +285,10 @@ margin-bottom:10px;
 
 .gallery-container.cards-container h6{ font-weight: bold; font-size: 16px;}
 
+.margin-left{
+	margin-left: 1em;
+}
 
+.w-7{
+	width: 7em;
+}

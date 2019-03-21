@@ -8,3 +8,24 @@ footer{
     margin-top: -50px;
     border-radius:10px;
   }
+
+.footer_style {
+  background-color: #3f3f3f;
+  color: #fff;
+  height: 40px;
+  width: 100%;
+  position: relative;
+  left: 0em;
+  bottom: 0em;
+  text-align: center;
+  padding-top: 0.50em;
+}
+
+.imagewidth{
+  width: 35%;
+}
+
+.m-6{
+  margin: -2em;
+  margin-top: 0em
+}
