@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<!-- <nav class="navbar navbar-expand-lg navbar-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-=======
 <nav class="boxtransition navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a class="navbar-brand" href="#"> <img src="../../assets/images/dalLogo.png" width="60" height="40" class="d-inline-block align-top" alt=""> DalEvents </a>
  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
->>>>>>> feature/anuEvents
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
     <ul class="navbar-nav mt-2 mt-lg-0 nav nav-tabs border-0" role="tablist" >
@@ -26,15 +20,12 @@
       <li class="nav-item" *ngIf="userIsAuthenticated">
         <a class="nav-link" href="/create-event">Create Event</a>
       </li>
-<<<<<<< HEAD
-=======
       <li>
         <a data-toggle="tab" class="nav-link" href="#help">Help</a>
       </li>
       <li>
         <span class="nav-link" *ngIf="userIsAuthenticated" href="#help">{{fname}}</span>
       </li>
->>>>>>> feature/anuEvents
     </ul>
     <form class="form-inline my-2 my-lg-0" *ngIf="!userIsAuthenticated">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" *ngIf="!userIsAuthenticated">
@@ -56,67 +47,4 @@
 		    </ul>
 		</div>
   </div>
-<<<<<<< HEAD
-  <li class="dropdown nav-item active">
-    <a class="dropdown-toggle nav-item active" data-toggle="dropdown"  href="#">user-profile
-    <span class="nav-item active"></span></a>
-    <ul class="dropdown-menu">
-      <li ><a href="#">Create event</a></li>
-      <li><a href="#">How to buy tickets?</a></li>
-      <li><a href="#">How to cancel the ticket?</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#">Sign Out</a></li>
-        <li class="divider"></li>
-      <li><a href="#">Any other issue</a></li>
-    </ul>
-  </li>
-</nav> -->
-<nav class="boxtransition navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#"> <img src="../../assets/images/dalLogo.png" width="60" height="40" class="d-inline-block align-top" alt=""> DalEvents </a>
- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mt-2 mt-lg-0 nav nav-tabs border-0" role="tablist" >
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Browse Events <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item" *ngIf="!userIsAuthenticated">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
-      <!-- <li class="nav-item" *ngIf="userIsAuthenticated">
-          <a class="nav-link" href="/user-profile">User Profile</a>
-      </li> -->
-      <li class="nav-item" *ngIf="!userIsAuthenticated">
-            <a class="nav-link" href="/event-details">Event Details</a>
-      </li>
-      <li class="nav-item" *ngIf="userIsAuthenticated">
-        <a class="nav-link" href="/create-event">Create Event</a>
-      </li>
-      <li>
-        <a data-toggle="tab" class="nav-link" href="#help">Help</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0" *ngIf="!userIsAuthenticated">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" *ngIf="!userIsAuthenticated">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <div>
-	    <ul class="navbar-nav mt-2 mt-lg-0 bar-width">
-			    <li class="nav-item dropdown" *ngIf="userIsAuthenticated">
-		            <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="userIsAuthenticated">
-		               <img style="display:inline-block;" src="../../assets/images/man.svg" alt="userprofile" id="imagewidth">
-		            </a>
-		            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile" *ngIf="userIsAuthenticated">
-		              <a class="dropdown-item" href="/user-profile" >Profile</a>
-		              <a class="dropdown-item" href="#">Settings</a>
-		              <div class="dropdown-divider"></div>
-		              <a class="dropdown-item" (click)="onlogout()">Log out</a>
-		            </div>
-		        </li>
-		    </ul>
-		</div>
-  </div>
-=======
->>>>>>> feature/anuEvents
 </nav>
