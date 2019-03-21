@@ -10,19 +10,14 @@ router.post('/login',(req,res,next)=>{
     User.findOne({
         email: req.body.email
     }).then(user =>{
-        console.log("user:::",user);
         if(!user){
             return res.status(401).json({
-                message: "Auth Failed"
+                message: "Invalid Username and Password"
             });
         }
         fetchedUser = user;
-        console.log(fetchedUser);
-        console.log(req.body.password);
         return bcrypt.compare(req.body.password , user.password);
         }).then(result =>{
-            console.log("result:::",result);
-
             if(!result){
                 return res.status(401).json({
                     message:"Auth Failed"
@@ -33,16 +28,15 @@ router.post('/login',(req,res,next)=>{
                 'secretthisisshouldbelonger',
                 {expiresIn:"1h"}
             );
-            console.log("token:::",token);
-
             res.status(200).json({
                 token:token,
-                expiresIn: 3600    
+                expiresIn: 3600,
+                fname: fetchedUser.firstname   
             });
         }).catch(err =>{
             console.log(err);
             return res.status(401).json({
-                message:"Auth Failed"
+                message:"Invalid Username and Password"
             })
         });
 

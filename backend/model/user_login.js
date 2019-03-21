@@ -32,6 +32,16 @@ var users = mongoose.Schema({
         unique: true,
         required:true,
         trim:true
+    },
+    category:{
+        type: String,
+        trim:true
+    },
+    banner_id:{
+        type: String,
+        unique: true,
+        required: true,
+        trim:true
     }
 });
 
