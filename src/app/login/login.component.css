@@ -46,3 +46,27 @@ form h1
 .pb{
 	padding-bottom: 1em;
 }
+
+.container-forgot{
+	text-align: center;
+	color: #fff !important;
+}
+
+.forgot-password{
+	position: relative;
+    background: none;
+    border: none;
+}
+
+
+.margin_left{
+	margin-left: -8.5em;
+}
+
+.w2{
+	width: 2.25em;
+}
+
+.iconwidth{
+	width: 150%
+}

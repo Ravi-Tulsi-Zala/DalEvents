@@ -24,7 +24,7 @@
         <a data-toggle="tab" class="nav-link" href="#help">Help</a>
       </li>
       <li>
-        <span data-toggle="tab" class="nav-link" *ngIf="userIsAuthenticated" href="#help">{{fname}}</span>
+        <span class="nav-link" *ngIf="userIsAuthenticated" href="#help">{{fname}}</span>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" *ngIf="!userIsAuthenticated">
