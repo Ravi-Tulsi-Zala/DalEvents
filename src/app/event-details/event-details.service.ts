@@ -16,7 +16,4 @@ export class EventDetailsService {
     return this.http.get<EventDetails[]>(this._url);
   }
 
-  getEventDetailsTitle():Observable<EventDetails>{
-    return this.http.get<EventDetails>(this._url+"1")
-  }
 }

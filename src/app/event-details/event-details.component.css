@@ -4,4 +4,15 @@ iframe{
     border:0; 
     width:100%;
   }
+
+.extra-space {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+.text-padding{
+  padding-left: 40px;
+}
   /* Event Detail Page CSS Ends*/

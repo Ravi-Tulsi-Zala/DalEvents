@@ -20,11 +20,4 @@ export class EventDetailsComponent implements OnInit {
         this.eventdetails=response;
         console.log(this.eventdetails);})
   }
-
-  getSpecifiEvent(){
-    this._eventDetailService.getEventDetailsTitle()
-      .subscribe((response) => {
-        this.eventdetail=response;
-        console.log(this.eventdetail);})
-  }
 }
