@@ -7,12 +7,12 @@
         <div class="row">
             <div class ="col-md-4">
                 <img src="https://via.placeholder.com/450" alt="PlaceholderImage">
-                <h2>Event Title</h2>
+                <h2>Event Title {{eventdetails[2]?.title}}</h2>
                 <hr class="light">
-                <h5>Hosted By: SUB</h5>
+                <h5>Hosted By: SUB {{eventdetails[2]?.host}}</h5>
                 <hr class="light">
                 <hr class="light">
-                <h5>Time</h5>
+                <h5>Time  {{eventdetails[2]?.date}}</h5>
                 <hr class="light">
                
             </div>
@@ -23,18 +23,15 @@
                     <hr class="light">
                     <!--Lorem Ipsum. (2019). Retrieved from https://www.lipsum.com/feed/html--> 
                     <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem dolor, tempus eget sem eget, commodo tincidunt magna. Nam fermentum sapien augue, consectetur dictum odio posuere quis. Morbi feugiat turpis id ex congue imperdiet. Phasellus finibus imperdiet purus. Aenean auctor arcu in ipsum volutpat tempus. Suspendisse porta sit amet tellus at sodales. In bibendum dui ut nulla consectetur volutpat. Suspendisse imperdiet ultrices finibus. Vivamus sagittis, nunc eget pharetra tempor, lectus nisl mattis odio, a hendrerit arcu diam eu elit. Donec laoreet augue in pellentesque dapibus.
-
-                            Nulla sit amet cursus nibh. Phasellus vel mauris tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed venenatis semper ligula, id aliquet dui pulvinar at. Quisque dictum, velit at elementum lobortis, mauris tellus rhoncus tellus, efficitur varius nibh mauris at nisi. Nam porttitor aliquet ipsum id semper. Sed rhoncus sem eu neque auctor suscipit. Phasellus euismod ultrices tortor sed feugiat. Pellentesque quis tellus ac mauris venenatis faucibus. Sed tortor tellus, bibendum quis neque eu, bibendum aliquet dolor. Quisque sodales, magna nec dignissim elementum, nulla quam aliquet dui, sed faucibus arcu enim nec velit. Pellentesque a semper nunc, a vulputate mauris.
+                      {{eventdetails[2]?.description}}
                     </p>
-
                     <hr class="light">
                     <h5>Location</h5>
                     <h6>Manhattan New York, NY USA</h6>
                     <!--Bootstrap Google Map. (2019). Retrieved from https://mdbootstrap.com/docs/jquery/javascript/google-maps/-->
                      <!--Google map-->
                     <div id="map-container-google-1" class="z-depth-1-half map-container">
-                            <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                            <iframe src="https://maps.google.com/maps?q=6033 South St.&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                             class="iframe" allowfullscreen></iframe>
                     </div>
                     <!--Google Maps-->
