@@ -6,7 +6,7 @@ const loginRoutes = require('./routes/test');
 const userRoutes = require('./routes/user');
 const eventRoutes = require('./routes/events');
 
-//mongoose.connect('mongodb+srv://dalevents:dalevents@dalevents-evire.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
+//mongoose connection 
 mongoose
   .connect('mongodb+srv://dalevents:dalevents@dalevents-evire.mongodb.net/test?retryWrites=true', { useNewUrlParser: true }
   )
@@ -33,6 +33,7 @@ app.use((req, res, next) => {
     next();
 });
 
+// Routing
 app.use('/test', loginRoutes);
 app.use('/login', userRoutes);
 app.use('/events', eventRoutes);
