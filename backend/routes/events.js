@@ -62,13 +62,8 @@ router.get('/', (req, res, next) => {
 router.post('/', (req, res, next) => {
     const event = new events({
         _id: new mongoose.Types.ObjectId(),
-<<<<<<< HEAD
-        eventId: req.body.eventId,
-        imageUrl:req.body.imageUrl,
-=======
         eventid: req.body.eventid,
         imageUrl: req.body.imageUrl,
->>>>>>> c9f4d7eab215fcd18777d5d119460827e94b3732
         title: req.body.title,
         description: req.body.description,
         date: req.body.date,
