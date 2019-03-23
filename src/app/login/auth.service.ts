@@ -33,6 +33,7 @@ export class AuthService {
     getisAuth(){
         return this.isAuthenticated;
     }
+    // Login service for validating the user and getting the frontend respnse
     login (email:String, password :String){
         const authData: AuthData ={email:email, password:password};
         this.http.post<{token: string, expiresIn: number, fname:string}> ("http://localhost:3000/login/login",authData)
@@ -72,6 +73,7 @@ export class AuthService {
             
         }
     }
+    //Logout part invalidate all tokens and datas
     logout(){
         this.token=null;
         this.isAuthenticated=false;
@@ -80,19 +82,19 @@ export class AuthService {
         this.clearAuthData();
         this.router.navigate(['/']);
     }
-
+    // saving authdata to local storage
     private saveAuthData(token:string , expirationDate: Date , fname:string){
         localStorage.setItem("token",token);
         localStorage.setItem("expirationDate",expirationDate.toISOString());
         localStorage.setItem("fname",fname);
     }
-    
+    // clearing the local storage
     private clearAuthData(){
         localStorage.removeItem("token");
         localStorage.removeItem("expirationDate");
         localStorage.removeItem("fname");
     }
-
+    // fetching the details to be set from the local storage
     private getAuthData(){
         const token = localStorage.getItem("token");
         const expirationDate = localStorage.getItem("expirationDate");
@@ -106,7 +108,7 @@ export class AuthService {
             fname : fname
         }
     }
-
+    // Timer set to validate the session tokens
     private setAuthTimer(duration:number){
         this.tokenTimer = setTimeout(()=> {
             this.logout();

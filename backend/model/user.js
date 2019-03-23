@@ -1,3 +1,4 @@
+// Schema for USer login Table
 const mongoose = require('mongoose');
 
 var userslogin = mongoose.Schema({

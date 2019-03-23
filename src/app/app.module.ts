@@ -16,7 +16,6 @@ import { AuthService } from './login/auth.service';
 import { MatInputModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventDetailsService } from './event-details/event-details.service';
-import {AgmCoreModule} from '@agm/core'
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,10 +34,7 @@ import {AgmCoreModule} from '@agm/core'
     FormsModule,
     HttpClientModule,
     MatInputModule,
-    BrowserAnimationsModule,
-    AgmCoreModule.forRoot({
-      apiKey:'AIzaSyAWhdiNIKH-gSPXahSDueD5FJf5GF6tTjs'
-    })
+    BrowserAnimationsModule
   ],
   providers: [AuthService,EventDetailsService],
   bootstrap: [AppComponent]
