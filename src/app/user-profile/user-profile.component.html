@@ -20,7 +20,7 @@
             <div class="col-md-6">
                 <div class="headerProfile">
                             <h2>
-                                Ravi Zala
+                                {{userone[0]?.username}}
                             </h2>
                             <br/>
                             <br/>
@@ -60,7 +60,7 @@
                                 <label>Banner Id</label>
                             </div>
                             <div class="col-md-6">
-                                <p>B00805073</p>
+                                <p>{{userone[2]?.banner_id}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -68,7 +68,7 @@
                                 <label>Name</label>
                             </div>
                             <div class="col-md-6">
-                                <p>Ravi Zala</p>
+                                <p>{{userone[2]?.firstname}} {{userone[0]?.lastname}}</p> 
                             </div>
                         </div>
                          <div class="row">
@@ -84,7 +84,7 @@
                                 <label>Email</label>
                             </div>
                             <div class="col-md-6">
-                                <p>ravizala100@gmail.com</p>
+                                <p>{{userone[2]?.email}}</p>
                             </div>
                         </div>
                     </div>
