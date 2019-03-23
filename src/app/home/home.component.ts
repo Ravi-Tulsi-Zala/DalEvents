@@ -23,10 +23,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       if (params.s) {
         this.searchEventData(params.s);
       }
-      
-      else{
 
-      }
+  
     })
     this.getEventData();
     this.getCategories();
@@ -42,9 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getCategories(){
-
     this.http.get("http://localhost:3000/categories/").subscribe(
-
       response => {
         
         console.log(response);
@@ -55,11 +51,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   onSubmitButton(btn){
 
+    this.data = [];
     let str :  string = (<HTMLInputElement>document.getElementById(btn)).innerText;
     this.http.get("http://localhost:3000/events/searchByTag/" + str).subscribe(
       response => {
         console.log(response);
-        this.cardsByCategory = response;
+        this.data = response;
       }
     )
   }
