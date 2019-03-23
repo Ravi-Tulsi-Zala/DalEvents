@@ -3,12 +3,12 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const events = require('../model/event')
 
-router.get('/:id', (req, res, next) => {
-    let a = req.params.id;
+router.get('/:eventid',(req,res,next) =>{
+    var a = req.params.eventid;
     console.log(a);
-    events.findById(a).then((todos) => {
-        res.status(200).json({ todos });
-    }).catch(err => {
+    events.findOne({eventId : req.params.eventid}).then((todos) =>{
+        res.send(todos);
+    }).catch(err =>{
         console.log(err);
         res.status(500).json({
             error: err
