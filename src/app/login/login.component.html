@@ -24,7 +24,7 @@
 					<div class="input-group-prepend w2">
 						<span class="input-group-text"> <img class="iconwidth" src="../../assets/images/house-key.svg" alt="pass"> </span>
 					</div>
-					<input class="form-control" name="password" minlength="8" placeholder="Password" ngModel type="password" #passwordInput="ngModel" required>	 
+					<input class="form-control" name="password" minlength="2" placeholder="Password" ngModel type="password" #passwordInput="ngModel" required>	 
 				</div>					
 				<div id="pass_error" class="val_error"></div>	 
 				<div class="form-group form-check">
@@ -32,7 +32,7 @@
 					<label class="form-check-label" for="exampleCheck1" id="rememberLabel">Remember Me</label>
 				</div>
 				<div class="form-group">
-					<button type="submit" class="btn btn-primary btn-block"> Log In </button>
+					<button type="submit" class="btn btn-primary btn-block" [disabled]="!loginForm.valid"> Log In </button>
 				</div> 
 				<div class="container-forgot">
 					<a class="forgot-password container-forgot" href="#">Forgot Password?</a>
