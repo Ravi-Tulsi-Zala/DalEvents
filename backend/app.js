@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const loginRoutes = require('./routes/test');
 const userRoutes = require('./routes/user');
 const eventRoutes = require('./routes/events');
+const categoryRoutes = require('./routes/category_route');
+const cors = require('cors');
 
 //mongoose connection 
 mongoose
@@ -19,22 +21,11 @@ mongoose
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, PATCH, PUT, DELETE, OPTIONS"
-    );
-    next();
-});
+app.use(cors());
 
 // Routing
 app.use('/test', loginRoutes);
 app.use('/login', userRoutes);
 app.use('/events', eventRoutes);
+app.use('/categories',categoryRoutes);
 module.exports = app;

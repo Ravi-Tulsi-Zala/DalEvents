@@ -62,113 +62,45 @@
     <div class="col-sm-8">
      
    <div>
-   <button type="button" class="btn btn-primary btn-md category" >Academic</button>
-   <button type="button" class="btn btn-primary btn-md category" >Sports</button>
-   <button type="button" class="btn btn-primary btn-md category" >Health</button>
-   <button type="button" class="btn btn-primary btn-md category" >Photography</button>
-   <button type="button" class="btn btn-primary btn-md category" >Music</button>
-   <button type="button" class="btn btn-primary btn-md category" >Beliefs</button>
-   
-   <div class="dropdown" style="display:inline; margin:0px">
-  <button class="btn btn-primary dropdown-toggle category" type="button" data-toggle="dropdown">More..
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Social</a></li>
-    <li><a href="#">Arts</a></li>
-    <li><a href="#">Film</a></li>
-    <li><a href="#">Writing</a></li>
-  </ul>
-</div>
-  
+     <form (ngSubmit)="onSubmitButton(submitButton1.id)" style="display: inline">
+      <button type="submit" id="Academic" class="btn btn-primary btn-md category" #submitButton1 >Academic</button>
+   </form>
+     <form (ngSubmit)="onSubmitButton(submitButton2.id)" style="display: inline">
+      <button type="submit" id="Sports" class="btn btn-primary btn-md category" #submitButton2>Sports</button>
+     </form>
+     <form (ngSubmit)="onSubmitButton(submitButton3.id)" style="display: inline">
+      <button type="submit" id="Health" class="btn btn-primary btn-md category" #submitButton3>Health</button>
+     </form>
+     <form (ngSubmit)="onSubmitButton(submitButton4.id)" style="display: inline">
+      <button type="submit" id="Photography" class="btn btn-primary btn-md category" #submitButton4>Photography</button>
+     </form>
+     <form (ngSubmit)="onSubmitButton(submitButton5.id)" style="display: inline">
+      <button type="submit" id="Music" class="btn btn-primary btn-md category" #submitButton5>Music</button>
+     </form>
+     <form (ngSubmit)="onSubmitButton(submitButton6.id)" style="display: inline">
+      <button type="submit" id="Beliefs" class="btn btn-primary btn-md category" #submitButton6>Beliefs</button> 
+    </form> 
    </div>
-   
     </div> <!--end of column 7-->
-    
-    
-   
-    
    </div>  <!--end of row-->
 </div> <!--end of container-->
 
+<div>{{noResult}}</div>
 <!-- Events Layout-->
-  <div class="gallery-container cards-container">
-   	<div class="container">
-   		
+  <div class="gallery-container cards-container" >
+   	<div class="container" id="noDisplay">
    		<div class="row">
-   			<div class="col-md-6 col-lg-4">
-   				<div class="transform-on-hover card ">
-                
-   					<a class="lightbox" href="#"><img src="../../assets/images/gallery1.jpg" class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
-   					<div class="card-body">
-   						<h6>Lorem Ipsum</h6>
-                        
-   						<p class="text-muted card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+   			<div class="col-md-4" *ngFor = "let d of data;">
+   				<div class="transform-on-hover card" >
+   					<a class="lightbox" href="#"><img src="{{d.imageUrl}}" class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
+   					<div class="card-body" style="max-height: 10%">
+               <h6>{{d.title}}</h6>
+               
+               <p class="text-muted card-text" >{{d.description}}</p>
+               <button type="button" class="btn btn-primary">Book Now</button>
    					</div>
-   				</div>
-                
+   				</div> 
    			</div>
-   			
-   			<div class="col-md-6 col-lg-4">
-   				<div class="transform-on-hover card ">
-                
-   					<a class="lightbox" href="#"><img src="../../assets/images/gallery1.jpg" class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
-   					<div class="card-body">
-   						<h6>Lorem Ipsum</h6>
-                        
-   						<p class="text-muted card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-   					</div>
-   				</div>
-   			</div>
-            
-         
-   			
-   			<div class="col-md-6 col-lg-4">
-   				<div class="transform-on-hover card ">
-                
-   	             <a class="lightbox" href="#"><img src="../../assets/images/gallery1.jpg" class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
-   					<div class="card-body">
-   						<h6>Lorem Ipsum</h6>
-   						<p class="text-muted card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-   					</div>
-   				</div>
-                
-   			</div>
-   		
-   			<div class="col-md-6 col-lg-4">
-   				<div class="transform-on-hover card ">
-   					<a class="lightbox" href="#"><img src="../../assets/images/gallery1.jpg" class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
-   					<div class="card-body">
-   						<h6>Lorem Ipsum</h6>
-                        
-   						<p class="text-muted card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-   					</div>
-   				</div>
-   			</div>
-            
-   			
-            
-   			<div class="col-md-6 col-lg-4">
-   				<div class="transform-on-hover card ">
-   					<a class="lightbox" href="#"><img src="../../assets/images/gallery1.jpg" class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
-   					<div class="card-body">
-                    
-   						<h6>Lorem Ipsum</h6>
-   						<p class="text-muted card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-   					</div>
-   				</div>
-   			</div>
-   			
-   			<div class="col-md-6 col-lg-4">
-   				<div class="transform-on-hover card ">
-   					<a class="lightbox" href="#"><img src="../../assets/images/gallery1.jpg" class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
-   					<div class="card-body">
-   						<h6>Lorem Ipsum</h6>
-                        
-   						<p class="text-muted card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-   					</div>
-   				</div>
-   			</div>
-   		</div>
-        
+			</div>
    	</div>
    </div>
