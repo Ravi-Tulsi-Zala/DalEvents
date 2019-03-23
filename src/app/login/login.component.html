@@ -15,7 +15,7 @@
 					<div class="input-group-prepend w2">
 						<span class="input-group-text" id="emailIcon"> <img class="iconwidth" src="../../assets/images/close-envelope.svg" alt="emailIcon">  </span>
 					</div>
-					<input class="form-control" name="email" ngModel type="email" placeholder="Email address" #emailInput="ngModel" required email pattern="">
+					<input class="form-control" name="email" ngModel type="email" placeholder="Email address" #emailInput="ngModel" required email pattern=".*@dal\.ca">
 					<mat-error *ngIf="emailInput.invalid && (emailInput.touched)" class="w-100">*Please enter a valid email.</mat-error>
 
 				</div> 
