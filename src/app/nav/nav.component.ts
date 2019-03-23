@@ -34,16 +34,8 @@ export class NavComponent implements OnInit, OnDestroy {
   onlogout(){
     this.authService.logout(); 
   }
-  Noerror(){
-    const noerror = "Nothinng";
-    return noerror;
-  }
+
   onSubmit(searchString: any) {
-   
-    console.log(searchString);
-    if(searchString = null){
-      return this.Noerror();
-    }
     this.router.navigateByUrl('/?s=' + searchString);
   }
 

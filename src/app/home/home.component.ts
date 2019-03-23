@@ -10,7 +10,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   private data: any;
+  private categories: any;
   private subRoute;
+  private cardsByCategory: any;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
@@ -23,10 +25,12 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
       
       else{
-        
+
+    (<HTMLInputElement>document.getElementById("noDisplay")).innerText = "No events found!";
       }
     })
     this.getEventData();
+    this.getCategories();
   }
 
   getEventData() {
@@ -34,6 +38,29 @@ export class HomeComponent implements OnInit, OnDestroy {
       response => {
         console.log(response);
         this.data = response;
+      }
+    )
+  }
+
+  getCategories(){
+
+    this.http.get("http://localhost:3000/categories/").subscribe(
+
+      response => {
+        
+        console.log(response);
+        this.categories= response;
+      }
+    )
+  }
+
+  onSubmitButton(btn){
+
+    let str :  string = (<HTMLInputElement>document.getElementById(btn)).innerText;
+    this.http.get("http://localhost:3000/events/searchByTag/" + str).subscribe(
+      response => {
+        console.log(response);
+        this.cardsByCategory = response;
       }
     )
   }
@@ -47,10 +74,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     )
   }
 
-  searchEvent()
-  {
-    console.log("sjhdbsbd");
-  }
 
   ngOnDestroy() {
 

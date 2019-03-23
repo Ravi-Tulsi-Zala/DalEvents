@@ -31,6 +31,23 @@ router.get('/search/:searchString', (req, res, next) => {
     });
 });
 
+router.get('/searchByTag/:searchCategory', (req, res, next) => {
+    let a = req.params.searchCategory;
+    console.log("hhdhd");
+    console.log(a);
+    events.find({
+        category: {$regex : new RegExp(a), $options: 'i'}
+    }).then((result) => {
+        res.status(200).json(result);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json({
+            error: err
+        });
+    });
+});
+
+
 router.get('/', (req, res, next) => {
     events.find().then((todos) => {
         res.send(todos);
