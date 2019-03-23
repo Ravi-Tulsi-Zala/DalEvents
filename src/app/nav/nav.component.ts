@@ -13,9 +13,11 @@ export class NavComponent implements OnInit, OnDestroy {
 
   private rsub;
   private authListenerSubs: Subscription;
+  
   constructor(private authService : AuthService , private router: Router) { }
 
   ngOnInit() {
+  
     this.rsub = this.router.events.subscribe(()=>{
       this.userIsAuthenticated = this.authService.getisAuth();
       this.fname = this.authService.getFirstname();
@@ -28,9 +30,23 @@ export class NavComponent implements OnInit, OnDestroy {
       this.userIsAuthenticated = isAuthenticated;
     });
   }
+  
   onlogout(){
     this.authService.logout(); 
   }
+  Noerror(){
+    const noerror = "Nothinng";
+    return noerror;
+  }
+  onSubmit(searchString: any) {
+   
+    console.log(searchString);
+    if(searchString = null){
+      return this.Noerror();
+    }
+    this.router.navigateByUrl('/?s=' + searchString);
+  }
+
   ngOnDestroy(){
     this.authListenerSubs.unsubscribe();
   }
