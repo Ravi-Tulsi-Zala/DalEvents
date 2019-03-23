@@ -8,7 +8,7 @@ const eventRoutes = require('./routes/events');
 const categoryRoutes = require('./routes/category_route');
 const cors = require('cors');
 
-//mongoose.connect('mongodb+srv://dalevents:dalevents@dalevents-evire.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
+//mongoose connection 
 mongoose
   .connect('mongodb+srv://dalevents:dalevents@dalevents-evire.mongodb.net/test?retryWrites=true', { useNewUrlParser: true }
   )
@@ -23,6 +23,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors());
 
+// Routing
 app.use('/test', loginRoutes);
 app.use('/login', userRoutes);
 app.use('/events', eventRoutes);

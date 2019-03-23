@@ -76,12 +76,7 @@ router.post('/', (req, res, next) => {
     });
     event.save().then((docs) => {
         res.send(docs);
-
     }).catch(err => console.log(err));
-    res.status(201).json({
-        message: 'Handling POST requests to /event',
-        createdPet: event
-    });
 });
 
 module.exports = router;

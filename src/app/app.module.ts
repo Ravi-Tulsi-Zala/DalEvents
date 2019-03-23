@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AuthService } from './login/auth.service';
 import { MatInputModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EventDetailsService } from './event-details/event-details.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule,
     BrowserAnimationsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService,EventDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
