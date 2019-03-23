@@ -6,13 +6,13 @@
 <div class="container-fluid">
         <div class="row">
             <div class ="col-md-4">
-                <img src={{eventdetails[0]?.imageUrl}} alt="PlaceholderImage">
-                <h2 class="text-padding">{{eventdetails[0]?.title}}</h2>
+                <img src={{particularEvent?.imageUrl}} alt="PlaceholderImage">
+                <h2 class="text-padding">{{particularEvent?.title}}</h2>
                 <hr class="light">
-                <h5 class="text-padding">Hosted By: {{eventdetails[0]?.host}}</h5>
+                <h5 class="text-padding">Hosted By: {{particularEvent?.host}}</h5>
                 <hr class="light">
                 <hr class="light">
-                <h5 class="text-padding" >Time  {{eventdetails[0]?.date}}</h5>
+                <h5 class="text-padding" >Time  {{particularEvent?.date}}</h5>
                 <hr class="light">
                
             </div>
@@ -23,11 +23,11 @@
                     <hr class="light">
                     <!--Lorem Ipsum. (2019). Retrieved from https://www.lipsum.com/feed/html--> 
                     <p>
-                      {{eventdetails[0]?.description}}
+                      {{particularEvent?.description}}
                     </p>
                     <hr class="light">
                     <h5>Location</h5>
-                    <h6>{{eventdetails[0]?.location}}</h6>
+                    <h6>{{particularEvent?.location}}</h6>
                     <!--Bootstrap Google Map. (2019). Retrieved from https://mdbootstrap.com/docs/jquery/javascript/google-maps/-->
                      <!--Google map-->
                     <!--Google Maps-->
@@ -48,10 +48,9 @@
                           <div class="col-md-6 col-lg-4" *ngFor="let eventdetail of similarEvents">
                             <div class="transform-on-hover card " >
                                 
-                              <a class="lightbox" href="/event-details"><img src={{eventdetail?.imageUrl}}  class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
+                              <a class="lightbox" href="/event-details/{{eventdetail?.eventId}}" ><img src={{eventdetail?.imageUrl}}  class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
                               <div class="card-body">
                                 <h6>{{eventdetail?.title}}</h6>
-                                        
                                 <p class="text-muted card-text max-length">{{eventdetail?.description}}</p>
                               </div>
                             </div>

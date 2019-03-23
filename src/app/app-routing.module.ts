@@ -18,6 +18,9 @@ const routes: Routes = [
     path: 'event-details', component: EventDetailsComponent
   },
   {
+    path: 'event-details/:slug', component: EventDetailsComponent
+  },
+  {
     path: 'create-event', component: CreateEventComponent,canActivate:[AuthGuard]
   },
   {

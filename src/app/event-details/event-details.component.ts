@@ -1,32 +1,50 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 import { EventDetailsService } from './event-details.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-event-details',
   templateUrl: './event-details.component.html',
   styleUrls: ['./event-details.component.css']
 })
-export class EventDetailsComponent implements OnInit {
+export class EventDetailsComponent implements OnInit, OnDestroy{
 
-  public latitude:44.635497458;
-  public logitude:-63.58833098;
-  public eventdetails=[];
+  public allEventdetails=[];
   public similarEvents=[];
+  public particularEvent=[];
+  private routeSub:any;
+  slug:string;
+  
 
-  constructor(private _eventDetailService :EventDetailsService) { }
+  constructor(private _eventDetailService :EventDetailsService,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
      this._eventDetailService.getEventDetails()
       .subscribe((response) => {
-        this.eventdetails=response;
-        console.log(this.eventdetails);
-        this.similarEvents.push(this.eventdetails[3]);
-        this.similarEvents.push(this.eventdetails[4]);
-        this.similarEvents.push(this.eventdetails[5]);})
+        this.allEventdetails=response;
+        console.log(this.allEventdetails);
+        this.similarEvents.push(this.allEventdetails[3]);
+        this.similarEvents.push(this.allEventdetails[4]);
+        this.similarEvents.push(this.allEventdetails[5]);})
+
+        this._eventDetailService.getParticularEventDetails("8")
+        .subscribe((response) => {
+          this.particularEvent=response;
+          console.log(this.particularEvent);})
+        
+        this.routeSub =this.route.params.subscribe(params =>{
+          console.log(params)
+          this.slug=params['slug']
+          this._eventDetailService.getParticularEventDetails(this.slug)
+          .subscribe((response) => {
+            this.particularEvent=response;
+            console.log(this.particularEvent);})
+        })
   }
 
-
-  editDateTime(selectedEvent: number){
-    console.log(this.eventdetails[selectedEvent].date);
+  ngOnDestroy(){
+      this.routeSub.unsubscribe()
   }
+
 }
