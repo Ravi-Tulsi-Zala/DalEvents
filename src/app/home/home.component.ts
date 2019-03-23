@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       
       else{
 
-    (<HTMLInputElement>document.getElementById("noDisplay")).innerText = "No events found!";
       }
     })
     this.getEventData();
