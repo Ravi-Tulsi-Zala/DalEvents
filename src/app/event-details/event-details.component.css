@@ -15,4 +15,9 @@ iframe{
 .text-padding{
   padding-left: 40px;
 }
+
+
+agm-map{
+  height: 400px;
+}
   /* Event Detail Page CSS Ends*/

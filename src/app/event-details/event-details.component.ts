@@ -8,9 +8,9 @@ import { EventDetailsService } from './event-details.service';
 })
 export class EventDetailsComponent implements OnInit {
 
-
+  public latitude:44.635497458;
+  public logitude:-63.58833098;
   public eventdetails=[];
-  public eventdetail;
 
   constructor(private _eventDetailService :EventDetailsService) { }
 

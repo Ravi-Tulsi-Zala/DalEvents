@@ -6,13 +6,13 @@
 <div class="container-fluid">
         <div class="row">
             <div class ="col-md-4">
-                <img src="https://via.placeholder.com/450" alt="PlaceholderImage">
-                <h2 class="text-padding">Event Title {{eventdetails[2]?.title}}</h2>
+                <img src={{eventdetails[8]?.imageUrl}} alt="PlaceholderImage">
+                <h2 class="text-padding">{{eventdetails[8]?.title}}</h2>
                 <hr class="light">
-                <h5 class="text-padding">Hosted By: SUB {{eventdetails[2]?.host}}</h5>
+                <h5 class="text-padding">Hosted By {{eventdetails[8]?.host}}</h5>
                 <hr class="light">
                 <hr class="light">
-                <h5 class="text-padding" >Time  {{eventdetails[2]?.date}}</h5>
+                <h5 class="text-padding" > {{eventdetails[8]?.date}}</h5>
                 <hr class="light">
                
             </div>
@@ -23,17 +23,15 @@
                     <hr class="light">
                     <!--Lorem Ipsum. (2019). Retrieved from https://www.lipsum.com/feed/html--> 
                     <p>
-                      {{eventdetails[2]?.description}}
+                      {{eventdetails[8]?.description}}
                     </p>
                     <hr class="light">
                     <h5>Location</h5>
-                    <h6>Manhattan New York, NY USA</h6>
-                    <!--Bootstrap Google Map. (2019). Retrieved from https://mdbootstrap.com/docs/jquery/javascript/google-maps/-->
+                    <h6 id="location">{{eventdetails[8]?.location}}</h6>
                      <!--Google map-->
-                    <div id="map-container-google-1" class="z-depth-1-half map-container">
-                            <iframe src="https://maps.google.com/maps?q=6033 South St.&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-                            class="iframe" allowfullscreen></iframe>
-                    </div>
+                      <agm-map [latitude]="latitude" [longitude]="longitude">
+
+                      </agm-map>
                     <!--Google Maps-->
                 <hr class="light">
             </div>
@@ -90,4 +88,3 @@
                         </div>
                       </div>
                     </div>
-
