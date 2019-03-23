@@ -16,6 +16,7 @@ import { AuthService } from './login/auth.service';
 import { MatInputModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventDetailsService } from './event-details/event-details.service';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { EventDetailsService } from './event-details/event-details.service';
     CreateEventComponent,
     NavComponent,
     FooterComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
