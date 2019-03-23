@@ -24,11 +24,11 @@ export class EventDetailsComponent implements OnInit, OnDestroy{
       .subscribe((response) => {
         this.allEventdetails=response;
         console.log(this.allEventdetails);
-        this.similarEvents.push(this.allEventdetails[3]);
+        this.similarEvents.push(this.allEventdetails[0]);
         this.similarEvents.push(this.allEventdetails[4]);
-        this.similarEvents.push(this.allEventdetails[5]);})
+        this.similarEvents.push(this.allEventdetails[3]);})
 
-        this._eventDetailService.getParticularEventDetails("8")
+        this._eventDetailService.getParticularEventDetails("9")
         .subscribe((response) => {
           this.particularEvent=response;
           console.log(this.particularEvent);})
