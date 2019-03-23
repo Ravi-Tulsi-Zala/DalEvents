@@ -14,7 +14,7 @@ export class AuthService {
     private isAuthenticated = false;
     private tokenTimer: any;
     private fname:string;
-    constructor(private http:HttpClient,private router:Router){}    
+    constructor(private http:HttpClient,private router:Router){} 
     getToken()
     {
         return this.token;
@@ -33,6 +33,34 @@ export class AuthService {
     getisAuth(){
         return this.isAuthenticated;
     }
+    // forgot(email:string):Observable<AuthForgot[]>{
+    //     return this.http.get<AuthForgot[]>(this._url+email);
+    //   }
+    //  // Forgot Password
+    //  forgot(email:String){
+    //     const AuthForgot: AuthForgot ={email:email};
+    //     this.http.post<{token: string, expiresIn: number, fname:string}> ("http://localhost:3000/login/forgot-password",AuthForgot)
+    //     .subscribe(response =>{
+    //         const token = response.token;
+    //         this.token = token; 
+    //         if(token){
+    //             const expiresInDuration = response.expiresIn;
+    //             this.fname=response.fname;
+    //             this.setAuthTimer(expiresInDuration);
+    //             this.isAuthenticated = true;
+    //             this.authstatusListener.next(true);
+    //             const now = new Date;
+    //             const expirationDate = new Date(now.getTime() + expiresInDuration * 1000);
+    //             this.saveAuthData(token,expirationDate,this.fname);
+    //             this.router.navigate(['/']);
+    //             return token;
+    //         }
+    //     }, error =>{
+    //         this.authstatusListener.next(false);
+    //     });
+    // }  
+    
+
     // Login service for validating the user and getting the frontend respnse
     login (email:String, password :String){
         const authData: AuthData ={email:email, password:password};

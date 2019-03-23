@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AuthService } from './login/auth.service';
 import { MatInputModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CreateEventComponent,
     NavComponent,
     FooterComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
