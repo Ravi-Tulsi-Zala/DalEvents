@@ -19,15 +19,24 @@ the university by browsing the different categories of events. DalEvents will br
 Steps to install 
 ============================================================================================================================================
 
+1) Git clone the project DalEventsProject using Clone with HTTPS URL : https://git.cs.dal.ca/jelliott/daleventsproject.git into local 
+repository through command--> git clone <URL>
+2) Feture branch for the project is "feature/eventsSearch". From the local repo, use command --> git checkout feature/eventsSearch <-- 
+to switch branch from develop as it is created from develop.
+3) If you are using visual code please follow the below commands
 
+	- Install node modules in the daleventsproejct directory using command --> npm install <-- this will install and upgrade the exxisting
+	  node modules. Switch the directory to backend and install the node modules using the same command.
 
 
 ============================================================================================================================================
 Steps to run
 ============================================================================================================================================
 
-
-
+1) First create the terminal from the "+" sign in terminal section. Two terminals are needed as we are using database server and localhost
+2)In the first terminal use the command --> npm start <-- which will run the commnd ng serve. If it does not work, use the alternative 
+command --> ng serve -o <--- for opening the website in browser. This will load the frontend. 
+3)  In the second terminal, change the directory to backend in order to connect to database. Use command --> npm start <-- to connect to database. If the command doesn't work use the alternative command --> node server.js <-- to connect to database.
 
 
 ============================================================================================================================================
@@ -35,21 +44,23 @@ How to Interact with the feature?
 ============================================================================================================================================
 
 
-First step is to open the home.html page which is the landing page of the website. On the navigation bar , useful options like Login, Sign up,and Search Events are given.
-From the homepage users can sign up Sign Up
- for the DalEvents website in order to enable the features like Tab Filtering for events, events by date and user profile.After successful sgn up users will be redirected to Log In page. After successfull log in, users will be redirected to home page with the special features enabled.
-User can access the their profiles fromm the navigation bar by clicking on the user icon on the top right. With the date picker feature users can select the date.
-The whole website flow for the website is given below: 
+First step is to open the home.html page which is the landing page of the website. On the navigation bar ,Search event option is given. On particular search keyword, related cards will be displayed. Tags feature is also given in order to simplify exploring events using categories.
+It will show cards related to the particular tag.Both features are available for both logged in users and guests.
+ 
+Features flow in the website is given below: 
 
-Website Flow : 
+Features Flow : 
 
-home page(home.html) ---> Search Feature()
+	 1) home page(home.html) ---> Search Feature()
 
-home page(home.html) ---> Tags Feature()
+	 	This feature is useful for finding events with keyword. This feature is not static. It interacts with database to find the case insensitive search in database fot the specific events related to that keyword. 
 
+	 2) home page(home.html) ---> Tags Feature()
+
+	 	This feature is useful for exploring events using the tags like filtering elements. This feature is not static.This feature interacts with database in order to find events. 
 
 ============================================================================================================================================
-Prerequiste Modules for developers
+Technologies Used in project
 ============================================================================================================================================
 
 
@@ -105,8 +116,14 @@ Prerequiste Modules for developers
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
+6) HTML5 and CSS3
 
 
+7) MEAN (MongoDB, Express , Angular, NodeJs) stack framework
+ 	
+ MongoDB is the datalayer of the  MEAN stack. Using Express server with node js make the application single threaded. It is single thereaded because every request satisfied by the node js single thread or send to the internal thread pool of the express web server.
+ AngularJs is useful because of its capability to reduce the HTML code using the component like ngFor, ngIf etc. With AngularJS, designers can use HTML as the template language and it allows for the extension of HTML's syntax to convey the application's components effortlessly.
+ Node js is useful creating HTTP requests for CRUD operations in the database.
 
 
 ============================================================================================================================================
@@ -150,15 +167,39 @@ Usage : I gained the knowledge about javascript validation for form components f
 
 Usage : I used this website in order to develop the navbar.
 
+[9]"Practical Uses of AngularJS: Create a Single Page Application (SPA) or a Website Menu in an Instant", Awwwards.com, 2019. [Online]. Available: https://www.awwwards.com/practical-uses-of-angularjs-create-a-single-page-application-spa-or-a-website-menu-in-an-instant.html. [Accessed: 24- Mar- 2019].
+
+
+
 
 -----------------------------------------
 Images used for the background and events
 ------------------------------------------
 [1]Images.pexels.com, 2019. [Online]. Available: https://images.pexels.com/photos/16408/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940. [Accessed: 10- Feb- 2019].
 
-[2]Images.pexels.com, 2019. [Online]. Available: https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940. [Accessed: 10- Feb- 2019].
+[2]Brocku.ca, 2019. [Online]. Available: https://brocku.ca/brock-news/wp-content/uploads/2017/04/Mental-health-1600x1067.jpg?x68208. [Accessed: 24- Mar- 2019].
 
-[3]"Redirect Notice", Google.com, 2019. [Online]. Available: https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjCtKXxsK7gAhULoYMKHesqDLIQjRx6BAgBEAU&url=http%3A%2F%2Fwallpaper21.com%2Fdark-android-wallpaper%2Fblurred-photos-and-desktop-backgrounds-for-mobile-up-wallpaper-wpt7602722%2F&psig=AOvVaw3YOdlK7TTjODvhiuWsYHex&ust=1549792423643363. [Accessed: 10- Feb- 2019].
+[3]Img.evbuc.com, 2019. [Online]. Available: https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F57158134%2F159856653045%2F1%2Foriginal.20190220-224541?h=230&w=460&auto=compress&rect=0%2C0%2C2160%2C1080&s=2bc3ccf9341f72030e28d7232c884747. [Accessed: 24- Mar- 2019].
+
+[4]Robensmith.files.wordpress.com, 2019. [Online]. Available: https://robensmith.files.wordpress.com/2012/06/events.jpg. [Accessed: 24- Mar- 2019].
+
+[5]Secondstareventservices.com, 2019. [Online]. Available: http://secondstareventservices.com/images/event-production/JCS1.jpg. [Accessed: 24- Mar- 2019].
+
+[6]Carleton.ca, 2019. [Online]. Available: https://carleton.ca/communityfirst/wp-content/uploads/EVENTS-audience-pixabay2.jpg. [Accessed: 24- Mar- 2019].
+
+[7]Symphonynovascotia.ca, 2019. [Online]. Available: https://symphonynovascotia.ca/wp-content/uploads/2015/02/St.-Johns-Anglican-Church-Lunenburg-e1424134954833.jpg. [Accessed: 24- Mar- 2019].
+
+[8]Cdn.dal.ca, 2019. [Online]. Available: https://cdn.dal.ca/content/dam/dalhousie/images/academics/UG/Therapeutic%20Recreation/Leisure%20three%20in%20green.jpg.lt_638a77ba5d8356d24013284d5408210b.res/Leisure%20three%20in%20green.jpg. [Accessed: 24- Mar- 2019].
+
+[9]Shiftkeylabs.ca, 2019. [Online]. Available: https://shiftkeylabs.ca/wp-content/uploads/2018/08/TensorFlow-Workshop-1024x576.jpg. [Accessed: 24- Mar- 2019].
+
+[10]Billboard.com, 2019. [Online]. Available: https://www.billboard.com/files/media/silk-road-ensemble-grand-central-2017-billboard-1548.jpg. [Accessed: 24- Mar- 2019].
+
+[11]Images.pexels.com, 2019. [Online]. Available: https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940. [Accessed: 10- Feb- 2019].
+
+
+[12]"Redirect Notice", Google.com, 2019. [Online]. Available: https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjCtKXxsK7gAhULoYMKHesqDLIQjRx6BAgBEAU&url=http%3A%2F%2Fwallpaper21.com%2Fdark-android-wallpaper%2Fblurred-photos-and-desktop-backgrounds-for-mobile-up-wallpaper-wpt7602722%2F&psig=AOvVaw3YOdlK7TTjODvhiuWsYHex&ust=1549792423643363. [Accessed: 10- Feb- 2019].
+
 
 
 
