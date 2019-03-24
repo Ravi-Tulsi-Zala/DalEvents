@@ -62,6 +62,8 @@ src:[3]
 
 -   The date in the Event Details Page are inconsistent. As a group, we are working on how the data will be represented in the database. It is an iterative process and we should have a better version before the final demo of the project
 
+## W3C Compliance Check
+I only worked on the Event Details' component HTML. The header and footer are similar for all pages and are compliant. The Event Details's component HTML will throw errors on "*ngIf" ,"*ngFor", and service variables:{{eventdetails[0].firstname}}. Any other HTML within the component is compliant. The css file is compliant.
 
 ## Setup Instructions
 
