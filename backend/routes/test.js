@@ -35,4 +35,22 @@ router.post('/',(req,res,next)=>{
     });
 });
 
+
+router.put('/:username',(req,res,next)=>{
+    const login = new user_login({
+        _id: new mongoose.Types.ObjectId(),
+        username: req.body.username,
+        password: req.body.password,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        category : req.body.category,
+        banner_id :req.body.banner_id
+    });
+    login.save().then((docs)=>{
+        res.send(docs);
+
+    }).catch(err => console.log(err));
+});
+
 module.exports = router;

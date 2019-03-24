@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {UserinfoService } from './userinfo.service'
+import {UserinfoService } from './userinfo.service';
+import {LoginComponent } from '../login/login.component'
+
 
 @Component({
   selector: 'app-user-profile',
@@ -16,10 +18,12 @@ export class UserProfileComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit() {
+    console.log(LoginComponent.user_email);
     this._userdetail.getUserInfo().subscribe((response) =>{
     this.userone=response;
     console.log(this.userone);
-    this.userresult.push(this.userone[1]);
+    console.log(this.userone[1]);
+    //this.userresult.push(this.userone[1]);
     })
   }
 

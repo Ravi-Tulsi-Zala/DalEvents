@@ -8,7 +8,7 @@
                 <!-- Snippet for Image Uploader-->
 
                <div class="user-img">
-                    <img src="../../assets/images/user.png" alt=""/>
+                    <img src="{{userone[1]?.category}}" alt=""/>
                     <div class="file btn btn-lg btn-primary">
                          Change Picture
                         <input type="file" name="file"/>
@@ -20,7 +20,7 @@
             <div class="col-md-6">
                 <div class="headerProfile">
                             <h2>
-                                {{userone[0]?.username}}
+                                {{userone[1]?.username}}
                             </h2>
                             <br/>
                             <br/>
@@ -60,7 +60,7 @@
                                 <label>Banner Id</label>
                             </div>
                             <div class="col-md-6">
-                                <p>{{userone[2]?.banner_id}}</p>
+                                <p>{{userone[1]?.banner_id}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -68,7 +68,7 @@
                                 <label>Name</label>
                             </div>
                             <div class="col-md-6">
-                                <p>{{userone[2]?.firstname}} {{userone[0]?.lastname}}</p> 
+                                <p>{{userone[1]?.firstname}} {{userone[1]?.lastname}}</p> 
                             </div>
                         </div>
                          <div class="row">
@@ -84,7 +84,7 @@
                                 <label>Email</label>
                             </div>
                             <div class="col-md-6">
-                                <p>{{userone[2]?.email}}</p>
+                                <p>{{userone[1]?.email}}</p>
                             </div>
                         </div>
                     </div>
