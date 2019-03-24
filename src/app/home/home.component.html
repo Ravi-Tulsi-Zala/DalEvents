@@ -78,21 +78,20 @@
       <button type="submit" id="Music" class="btn btn-primary btn-md category" #submitButton5>Music</button>
      </form>
      <form (ngSubmit)="onSubmitButton(submitButton6.id)" style="display: inline">
-      <button type="submit" id="Beliefs" class="btn btn-primary btn-md category" #submitButton6>Beliefs</button> 
+      <button type="submit" id="Beliefs" class="btn btn-primary btn-md category" #submitButton6>Dance</button> 
     </form> 
    </div>
     </div> <!--end of column 7-->
    </div>  <!--end of row-->
 </div> <!--end of container-->
 
-<div>{{noResult}}</div>
 <!-- Events Layout-->
   <div class="gallery-container cards-container" >
-   	<div class="container" id="noDisplay">
+   	<div class="container" id="noDisplay" *ngIf = "!noError">
    		<div class="row">
    			<div class="col-md-4" *ngFor = "let d of data;">
    				<div class="transform-on-hover card" >
-   					<a class="lightbox" href="#"><img src="{{d.imageUrl}}" class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
+   					<a class="lightbox" href="#"><img src="{{d.imageUrl}}" class="card-img-top" style="max-height:174px; width:100%" alt="error loading image"></a>
    					<div class="card-body" style="max-height: 10%">
                <h6>{{d.title}}</h6>
                

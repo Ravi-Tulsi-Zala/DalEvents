@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private categories: any;
   private subRoute;
   private cardsByCategory: any;
+  private noError : boolean;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
@@ -23,8 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       if (params.s) {
         this.searchEventData(params.s);
       }
-
-  
+     
     })
     this.getEventData();
     this.getCategories();
@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   getEventData() {
     this.http.get("http://localhost:3000/events/").subscribe(
       response => {
+        
         console.log(response);
         this.data = response;
       }
@@ -66,6 +67,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       response => {
         console.log(response);
         this.data = response;
+        
       }
     )
   }
