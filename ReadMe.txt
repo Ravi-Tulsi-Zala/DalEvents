@@ -1,5 +1,5 @@
                                                                 +++++++++++++++++++
-                                                                DalEvents Website
+                                                                 DalEvents Website
                                                                 +++++++++++++++++++
 
 
@@ -48,19 +48,19 @@ First step is to open the home.html page which is the landing page of the websit
 On particular search keyword, related cards will be displayed. Tags feature is also given in order to simplify exploring events using categories.
 It will show cards related to the particular tag.Both features are available for both logged in users and guests.
  
-Features flow in the website is given below: 
-
-Features Flow : 
+Features flow in the website : 
 
 	 1) home page(home.html) ---> Search Feature()
 
 	 	This feature is useful for finding events with keyword. This feature is not static. It interacts with database to find the case insensitive
-	 	search in database fot the specific events related to that keyword. 
+	 	search in database fot the specific events related to that keyword. Searching the keyword in the website use HTTP verb GET method for finding
+	 	particular event.
 
 	 2) home page(home.html) ---> Tags Feature()
 
 	 	This feature is useful for exploring events using the tags like filtering elements. This feature is not static.This feature interacts with
-	 	database in order to find events. 
+	 	database in order to find events. Tags feature use the HTTP verb GET method for finding the particular category in the database and event 
+	 	details according to that category.
 
 ==================================================================================================================================================
 Technologies Used in project
@@ -128,7 +128,8 @@ Technologies Used in project
  because every request satisfied by the node js single thread or send to the internal thread pool of the express web server.
  AngularJs is useful because of its capability to reduce the HTML code using the component like ngFor, ngIf etc. With AngularJS, designers 
  can use HTML as the template language and it allows for the extension of HTML's syntax to convey the application's components effortlessly.
- Node js is useful creating HTTP requests for CRUD operations in the database.
+ Node js is useful creating HTTP requests for CRUD operations in the database. AngularJS is powerful for integrating the frontend components 
+ using routes.
  
 ============================================================================================================================================
 W3C compliance check
