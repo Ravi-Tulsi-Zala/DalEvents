@@ -22,7 +22,7 @@ Steps to install
 repository through command--> git clone <URL>
 2) Feture branch for the project is "feature/eventsSearch". From the local repo, use command --> git checkout feature/eventsSearch <-- 
 to switch branch from develop as it is created from develop.
-3) If you are using visual code please follow the below commands
+3) If you are using Visual Studio Code IDE (Recommended), please follow the below commands : 
 
 	- Install node modules in the daleventsproejct directory using command --> npm install <-- this will install and upgrade the exxisting
 	  node modules. Switch the directory to backend and install the node modules using the same command.
@@ -44,7 +44,7 @@ How to Interact with the feature?
 =================================================================================================================================================
 
 
-First step is to open the home.html page which is the landing page of the website. On the navigation bar ,Search event option is given. 
+First step is to open the home.html page which is the landing page of the website. On the navigation bar, search event option is given. 
 On particular search keyword, related cards will be displayed. Tags feature is also given in order to simplify exploring events using categories.
 It will show cards related to the particular tag.Both features are available for both logged in users and guests.
  
