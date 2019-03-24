@@ -97,25 +97,6 @@ html,body{
 	color:#6f7287;	
 }
 
-.navbar a
-{
-	color:#6f7287 !important;
-}
-
-.navbar a:hover
-{
-	color:#2e6da4 !important;
-	background-color:#f2f2f2 !important;
-	
-}
-
-
-.navbar-inverse .navbar-nav > .active > a
-{
-	color:#2e6da4 !important;
-	background-color:#f2f2f2 !important;
-}
-
 .gallery-container.cards-container .card-body p{font-size: 14px;}
 
 .gallery-container .heading{text-align: center; margin-bottom: 49px; }
@@ -188,22 +169,6 @@ margin-bottom:10px;
 
 
 
-
-.footer-text1
-{
-	
-  font-weight:bold; font-size:28px;
-}
-
-.footer p
-{
-	
-	margin-top:10px;
-	margin-bottom:15px;
-	color:white;
-	padding:0px;
-}
-
 .gallery-container.cards-container .card-body{text-align: center;}
 
 
@@ -212,13 +177,6 @@ margin-bottom:10px;
 
 .gallery-container.cards-container .card img{box-shadow: 0px 2px 10px #B8B8B8;}
 
-
-.footer ul li a
-{
-	color:white;
-	font-size:16px;
-	
-}
 
 .forever-color
 {
