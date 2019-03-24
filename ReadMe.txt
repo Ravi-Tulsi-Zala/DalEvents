@@ -34,16 +34,18 @@ Steps to run
 
 1) First create the terminal from the "+" sign in terminal section. Two terminals are needed as we are using database server and localhost
 2)In the first terminal use the command --> npm start <-- which will run the commnd ng serve. If it does not work, use the alternative 
-command --> ng serve -o <--- for opening the website in browser. This will load the frontend. 
-3)  In the second terminal, change the directory to backend in order to connect to database. Use command --> npm start <-- to connect to database. If the command doesn't work use the alternative command --> node server.js <-- to connect to database.
+  command --> ng serve -o <--- for opening the website in browser. This will load the frontend. 
+3)  In the second terminal, change the directory to backend in order to connect to database. Use command --> npm start <-- to connect to
+database. If the command doesn't work use the alternative command --> node server.js <-- to connect to database.
 
 
-============================================================================================================================================
+=================================================================================================================================================
 How to Interact with the feature?
-============================================================================================================================================
+=================================================================================================================================================
 
 
-First step is to open the home.html page which is the landing page of the website. On the navigation bar ,Search event option is given. On particular search keyword, related cards will be displayed. Tags feature is also given in order to simplify exploring events using categories.
+First step is to open the home.html page which is the landing page of the website. On the navigation bar ,Search event option is given. 
+On particular search keyword, related cards will be displayed. Tags feature is also given in order to simplify exploring events using categories.
 It will show cards related to the particular tag.Both features are available for both logged in users and guests.
  
 Features flow in the website is given below: 
@@ -52,15 +54,17 @@ Features Flow :
 
 	 1) home page(home.html) ---> Search Feature()
 
-	 	This feature is useful for finding events with keyword. This feature is not static. It interacts with database to find the case insensitive search in database fot the specific events related to that keyword. 
+	 	This feature is useful for finding events with keyword. This feature is not static. It interacts with database to find the case insensitive
+	 	search in database fot the specific events related to that keyword. 
 
 	 2) home page(home.html) ---> Tags Feature()
 
-	 	This feature is useful for exploring events using the tags like filtering elements. This feature is not static.This feature interacts with database in order to find events. 
+	 	This feature is useful for exploring events using the tags like filtering elements. This feature is not static.This feature interacts with
+	 	database in order to find events. 
 
-============================================================================================================================================
+==================================================================================================================================================
 Technologies Used in project
-============================================================================================================================================
+==================================================================================================================================================
 
 
 1 ) Bootstrap version 4.2.1
@@ -120,8 +124,10 @@ Technologies Used in project
 
 7) MEAN (MongoDB, Express , Angular, NodeJs) stack framework
  	
- MongoDB is the datalayer of the  MEAN stack. Using Express server with node js make the application single threaded. It is single thereaded because every request satisfied by the node js single thread or send to the internal thread pool of the express web server.
- AngularJs is useful because of its capability to reduce the HTML code using the component like ngFor, ngIf etc. With AngularJS, designers can use HTML as the template language and it allows for the extension of HTML's syntax to convey the application's components effortlessly.
+ MongoDB is the datalayer of the  MEAN stack. Using Express server with node js make the application single threaded. It is single thereaded 
+ because every request satisfied by the node js single thread or send to the internal thread pool of the express web server.
+ AngularJs is useful because of its capability to reduce the HTML code using the component like ngFor, ngIf etc. With AngularJS, designers 
+ can use HTML as the template language and it allows for the extension of HTML's syntax to convey the application's components effortlessly.
  Node js is useful creating HTTP requests for CRUD operations in the database.
  
 ============================================================================================================================================
@@ -134,7 +140,6 @@ for the compliancy test. There is no error in both the files.
 ============================================================================================================================================
 References
 ============================================================================================================================================
-
 
 --------
 Websites
@@ -175,8 +180,6 @@ Usage : I used this website in order to develop the navbar.
 [9]"Practical Uses of AngularJS: Create a Single Page Application (SPA) or a Website Menu in an Instant", Awwwards.com, 2019. [Online]. Available: https://www.awwwards.com/practical-uses-of-angularjs-create-a-single-page-application-spa-or-a-website-menu-in-an-instant.html. [Accessed: 24- Mar- 2019].
 
 
-
-
 -----------------------------------------
 Images used for the background and events
 ------------------------------------------
@@ -201,7 +204,6 @@ Images used for the background and events
 [10]Billboard.com, 2019. [Online]. Available: https://www.billboard.com/files/media/silk-road-ensemble-grand-central-2017-billboard-1548.jpg. [Accessed: 24- Mar- 2019].
 
 [11]Images.pexels.com, 2019. [Online]. Available: https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940. [Accessed: 10- Feb- 2019].
-
 
 [12]"Redirect Notice", Google.com, 2019. [Online]. Available: https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjCtKXxsK7gAhULoYMKHesqDLIQjRx6BAgBEAU&url=http%3A%2F%2Fwallpaper21.com%2Fdark-android-wallpaper%2Fblurred-photos-and-desktop-backgrounds-for-mobile-up-wallpaper-wpt7602722%2F&psig=AOvVaw3YOdlK7TTjODvhiuWsYHex&ust=1549792423643363. [Accessed: 10- Feb- 2019].
 
