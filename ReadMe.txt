@@ -123,7 +123,13 @@ Technologies Used in project
  MongoDB is the datalayer of the  MEAN stack. Using Express server with node js make the application single threaded. It is single thereaded because every request satisfied by the node js single thread or send to the internal thread pool of the express web server.
  AngularJs is useful because of its capability to reduce the HTML code using the component like ngFor, ngIf etc. With AngularJS, designers can use HTML as the template language and it allows for the extension of HTML's syntax to convey the application's components effortlessly.
  Node js is useful creating HTTP requests for CRUD operations in the database.
-
+ 
+============================================================================================================================================
+W3C compliance check
+============================================================================================================================================
+HTML5 components are reusable like nav, so W3C will throw errors for that as it always find the first tag as HTML. In my html file, I used 
+angular componenet, so it will throw errors for the attributes like ngFor, ngIf etc. I only checked the index.html and css file of my feature 
+for the compliancy test. There is no error in both the files.
 
 ============================================================================================================================================
 References
