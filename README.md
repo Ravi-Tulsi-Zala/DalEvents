@@ -1,4 +1,4 @@
-#### Assignment 2 (Event Meet )
+#### Assignment 4 (Event Meet )
 
 The purpose of this assignment was to integrate the UI and come up with the final version. Moreover, one feature needs to be implemented.
 
