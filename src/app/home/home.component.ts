@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import {Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -13,20 +13,20 @@ export class HomeComponent implements OnInit, OnDestroy {
   private categories: any;
   private subRoute;
   private cardsByCategory: any;
+  private noError : boolean=true;
+  private pressed :boolean;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private http: HttpClient,private router:Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       console.log("route changed");
       console.log("params: " + params.s);
+      console.log(this.noError);
       if (params.s) {
         this.searchEventData(params.s);
       }
-      
-      else{
-
-      }
+     
     })
     this.getEventData();
     this.getCategories();
@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   getEventData() {
     this.http.get("http://localhost:3000/events/").subscribe(
       response => {
+        
         console.log(response);
         this.data = response;
       }
@@ -42,9 +43,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getCategories(){
-
     this.http.get("http://localhost:3000/categories/").subscribe(
-
       response => {
         
         console.log(response);
@@ -55,11 +54,31 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   onSubmitButton(btn){
 
+    this.data = [];
     let str :  string = (<HTMLInputElement>document.getElementById(btn)).innerText;
     this.http.get("http://localhost:3000/events/searchByTag/" + str).subscribe(
       response => {
         console.log(response);
-        this.cardsByCategory = response;
+        this.router.navigateByUrl('/?s=');
+        if(Object.keys(response).length === 0)
+        {
+          
+          this.noError=false;
+          console.log(this.noError);
+         (<HTMLInputElement>document.getElementById("errorDiv")).style.display = "block";
+        }
+        else
+        {
+     
+          this.noError=true;
+          (<HTMLInputElement>document.getElementById("errorDiv")).style.display = "none";
+        
+          console.log(this.noError);
+          this.data = response;
+          
+        }
+        
+       
       }
     )
   }
@@ -69,6 +88,23 @@ export class HomeComponent implements OnInit, OnDestroy {
       response => {
         console.log(response);
         this.data = response;
+        if(Object.keys(response).length === 0)
+        {
+          this.noError=false;
+          console.log(this.noError);
+         (<HTMLInputElement>document.getElementById("errorDiv")).style.display = "block";
+        }
+        else
+        {
+     
+          this.noError=true;
+          (<HTMLInputElement>document.getElementById("errorDiv")).style.display = "none";
+        
+          console.log(this.noError);
+          this.data = response;
+          
+        }
+        
       }
     )
   }

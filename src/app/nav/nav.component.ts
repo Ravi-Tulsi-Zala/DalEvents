@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AuthService} from '../login/auth.service'
 import { Subscription } from 'rxjs';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class NavComponent implements OnInit, OnDestroy {
   userIsAuthenticated = false;
   private fname : string;
-
+  
   private rsub;
   private authListenerSubs: Subscription;
   
@@ -36,7 +37,9 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(searchString: any) {
+   
     this.router.navigateByUrl('/?s=' + searchString);
+    
   }
 
   ngOnDestroy(){

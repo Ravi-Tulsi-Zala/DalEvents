@@ -78,17 +78,19 @@
       <button type="submit" id="Music" class="btn btn-primary btn-md category" #submitButton5>Music</button>
      </form>
      <form (ngSubmit)="onSubmitButton(submitButton6.id)" style="display: inline">
-      <button type="submit" id="Beliefs" class="btn btn-primary btn-md category" #submitButton6>Beliefs</button> 
+      <button type="submit" id="Beliefs" class="btn btn-primary btn-md category" #submitButton6>Dance</button> 
     </form> 
    </div>
     </div> <!--end of column 7-->
    </div>  <!--end of row-->
 </div> <!--end of container-->
 
-<div>{{noResult}}</div>
 <!-- Events Layout-->
   <div class="gallery-container cards-container" >
-   	<div class="container" id="noDisplay">
+   	<div class="container">
+      <div id="errorDiv"  style="display:none;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: xx-large;color:gray">
+        This category has no data in it..!!!
+      </div>
    		<div class="row">
    			<div class="col-md-4" *ngFor = "let d of data;">
    				<div class="transform-on-hover card" >

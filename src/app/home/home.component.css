@@ -294,7 +294,7 @@ margin-bottom:10px;
 }
 
 .max-length{
-	width: 250px;
+	width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
