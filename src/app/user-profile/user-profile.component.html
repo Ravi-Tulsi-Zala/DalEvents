@@ -2,13 +2,13 @@
     <form method="post" >
         <!--- This row is divided in 4-6-2 column type grid withe responsiveness -->
 
-        <div class="row">   
+        <div class="row">
             <div class="col-md-4">
 
                 <!-- Snippet for Image Uploader-->
 
                <div class="user-img">
-                    <img src="../../assets/images/user.png" alt=""/>
+                    <img src="{{image}}" alt=""/>
                     <div class="file btn btn-lg btn-primary">
                          Change Picture
                         <input type="file" name="file"/>
@@ -20,7 +20,7 @@
             <div class="col-md-6">
                 <div class="headerProfile">
                             <h2>
-                                Ravi Zala
+                                {{firstname}} {{lastname}}
                             </h2>
                             <br/>
                             <br/>
@@ -38,17 +38,17 @@
                         <li class="nav-item">
                             <a class="nav-link" id="password-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Change Passwrord</a>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
             <div class="col-md-2">
-                
+
             </div>
          </div>
              <!--- This row is divided in 4-8 column type grid withe responsiveness -->
          <div class="row">
-             <div class="col-md-4">    
+             <div class="col-md-4">
             </div>
 
             <!-- This column is useful for the content of the tabs -->
@@ -60,7 +60,7 @@
                                 <label>Banner Id</label>
                             </div>
                             <div class="col-md-6">
-                                <p>B00805073</p>
+                                <p>{{bannerNo}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -68,7 +68,7 @@
                                 <label>Name</label>
                             </div>
                             <div class="col-md-6">
-                                <p>Ravi Zala</p>
+                                <p>{{firstname}}</p>
                             </div>
                         </div>
                          <div class="row">
@@ -84,7 +84,7 @@
                                 <label>Email</label>
                             </div>
                             <div class="col-md-6">
-                                <p>ravizala100@gmail.com</p>
+                                <p>{{email}}</p>
                             </div>
                         </div>
                     </div>
@@ -98,6 +98,5 @@
                <input type="submit" class="profile-edit-btn btn-primary" name="btnAddMore" value="Edit Profile"/>
             </div>
         </div>
-    </form>           
+    </form>
 </div>
-

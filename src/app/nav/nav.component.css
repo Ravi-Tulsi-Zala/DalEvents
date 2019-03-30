@@ -38,11 +38,22 @@
 	.dropdown-menu{
 		position: absolute !important;
 	}
-	 .nav-link{
+	.nav-link{
 		 background-color:transparent !important;
-	 }
-}
+	}
+	.imagetitle{
+		display: none;
+	}
 
+}
+@media only screen and (min-width: 990px) {
+	.imagetitle{
+		display:inline-block;
+	}
+	.dropdownfield{
+		display: none;
+	}
+}
 
 #imagewidth{
 	margin-right: -1em;
