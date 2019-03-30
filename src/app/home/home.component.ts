@@ -88,6 +88,22 @@ export class HomeComponent implements OnInit, OnDestroy {
       response => {
         console.log(response);
         this.data = response;
+        if(Object.keys(response).length === 0)
+        {
+          this.noError=false;
+          console.log(this.noError);
+         (<HTMLInputElement>document.getElementById("errorDiv")).style.display = "block";
+        }
+        else
+        {
+     
+          this.noError=true;
+          (<HTMLInputElement>document.getElementById("errorDiv")).style.display = "none";
+        
+          console.log(this.noError);
+          this.data = response;
+          
+        }
         
       }
     )
