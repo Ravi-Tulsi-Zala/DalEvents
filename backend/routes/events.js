@@ -49,11 +49,7 @@ router.get('/searchByTag/:searchCategory', (req, res, next) => {
     });
 });
 
-<<<<<<< HEAD
-
-=======
 //This function gets all events within the DB
->>>>>>> feature/eventDetails
 router.get('/', (req, res, next) => {
     events.find().then((todos) => {
         res.send(todos);
@@ -65,10 +61,7 @@ router.get('/', (req, res, next) => {
     });
 });
 
-<<<<<<< HEAD
-=======
 //This function add an event to the DB
->>>>>>> feature/eventDetails
 router.post('/', (req, res, next) => {
     const event = new events({
         _id: new mongoose.Types.ObjectId(),
