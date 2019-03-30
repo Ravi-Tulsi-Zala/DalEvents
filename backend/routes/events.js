@@ -3,6 +3,8 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const events = require('../model/event')
 
+
+//This function is used to get a specific event
 router.get('/:eventid',(req,res,next) =>{
     var a = req.params.eventid;
     console.log(a);
@@ -47,7 +49,11 @@ router.get('/searchByTag/:searchCategory', (req, res, next) => {
     });
 });
 
+<<<<<<< HEAD
 
+=======
+//This function gets all events within the DB
+>>>>>>> feature/eventDetails
 router.get('/', (req, res, next) => {
     events.find().then((todos) => {
         res.send(todos);
@@ -59,6 +65,10 @@ router.get('/', (req, res, next) => {
     });
 });
 
+<<<<<<< HEAD
+=======
+//This function add an event to the DB
+>>>>>>> feature/eventDetails
 router.post('/', (req, res, next) => {
     const event = new events({
         _id: new mongoose.Types.ObjectId(),
