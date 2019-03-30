@@ -14,6 +14,21 @@ router.get('/',(req,res,next) =>{
     });
 });
 
+router.get('/:email',(req,res,next) =>{
+    var a = req.params.email;
+    console.log(a);
+    user_login.findOne({email : req.params.email}).then((todos) =>{
+        res.send(todos);
+    }).catch(err =>{
+        console.log(err);
+        res.status(500).json({
+            error: err
+        });
+    });
+});
+
+
+
 router.post('/',(req,res,next)=>{
     const login = new user_login({
         _id: new mongoose.Types.ObjectId(),
@@ -25,6 +40,12 @@ router.post('/',(req,res,next)=>{
         category : req.body.category,
         banner_id :req.body.banner_id
     });
+
+
+
+
+
+
     login.save().then((docs)=>{
         res.send(docs);
 
