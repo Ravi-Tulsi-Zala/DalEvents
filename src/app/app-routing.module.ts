@@ -6,6 +6,7 @@ import { CreateEventComponent } from './create-event/create-event.component';
 import { HomeComponent } from './home/home.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AuthGuard } from './login/auth.guard';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,9 @@ const routes: Routes = [
     path: 'event-details', component: EventDetailsComponent
   },
   {
+    path: 'event-details/:slug', component: EventDetailsComponent
+  },
+  {
     path: 'create-event', component: CreateEventComponent,canActivate:[AuthGuard]
   },
   {
@@ -25,6 +29,9 @@ const routes: Routes = [
   },
   {
     path: 'user-profile', component: UserProfileComponent,canActivate:[AuthGuard]
+  },
+  {
+    path: 'forgot-password', component: ForgotPasswordComponent
   },
   {
     path :'**', component:HomeComponent

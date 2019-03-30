@@ -19,25 +19,28 @@
       <!-- <li class="nav-item" *ngIf="userIsAuthenticated">
           <a class="nav-link" href="/user-profile">User Profile</a>
       </li> -->
-      <li class="nav-item">
-            <a class="nav-link" href="/event-details">Event Details</a>
-      </li>
       <li class="nav-item" *ngIf="userIsAuthenticated">
         <a class="nav-link" href="/create-event">Create Event</a>
       </li>
       <li>
         <a data-toggle="tab" class="nav-link" href="#help">Help</a>
       </li>
-      <li>
-        <span class="nav-link" *ngIf="userIsAuthenticated" href="#help">{{fname}}</span>
+      <li class="nav-item dropdown">
+        <a class="nav-link" *ngIf="userIsAuthenticated" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#help">{{fname}}</a>
+        <div class="dropdown-menu dropdown-menu-right dropdownfield" aria-labelledby="navbarDropdownProfile" *ngIf="userIsAuthenticated">
+            <a class="dropdown-item" href="/user-profile" >Profile</a>
+            <a class="dropdown-item" href="#">Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" (click)="onlogout()">Log out</a>
+          </div>
       </li>
     </ul>
     <div>
 	    <ul class="navbar-nav mt-2 mt-lg-0 bar-width">
 			    <li class="nav-item dropdown" *ngIf="userIsAuthenticated">
 		            <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="userIsAuthenticated">
-		               <img style="display:inline-block;" src="../../assets/images/man.svg" alt="userprofile" id="imagewidth">
-		            </a>
+		               <img class="imagetitle" src="../../assets/images/man.svg" alt="userprofile" id="imagewidth">
+                </a>
 		            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile" *ngIf="userIsAuthenticated">
 		              <a class="dropdown-item" href="/user-profile" >Profile</a>
 		              <a class="dropdown-item" href="#">Settings</a>

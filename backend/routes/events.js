@@ -3,18 +3,32 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const events = require('../model/event')
 
-router.get('/:id', (req, res, next) => {
-    let a = req.params.id;
+
+//This function is used to get a specific event
+router.get('/:eventid',(req,res,next) =>{
+    var a = req.params.eventid;
     console.log(a);
-    events.findById(a).then((todos) => {
-        res.status(200).json({ todos });
-    }).catch(err => {
+    events.findOne({eventId : req.params.eventid}).then((todos) =>{
+        res.send(todos);
+    }).catch(err =>{
         console.log(err);
         res.status(500).json({
             error: err
         });
     });
 });
+
+router.get('/:eventid/like',(req,res,next) =>{
+    events.updateOne({eventId : req.params.eventid},{like: req.params.like}).then((todos) =>{
+        res.send(todos);
+    }).catch(err =>{
+        console.log(err);
+        res.status(500).json({
+            error: err
+        });
+    });
+});
+
 
 router.get('/search/:searchString', (req, res, next) => {
     let a = req.params.searchString;
@@ -47,7 +61,7 @@ router.get('/searchByTag/:searchCategory', (req, res, next) => {
     });
 });
 
-
+//This function gets all events within the DB
 router.get('/', (req, res, next) => {
     events.find().then((todos) => {
         res.send(todos);
@@ -59,10 +73,11 @@ router.get('/', (req, res, next) => {
     });
 });
 
+//This function add an event to the DB
 router.post('/', (req, res, next) => {
     const event = new events({
         _id: new mongoose.Types.ObjectId(),
-        eventid: req.body.eventid,
+        eventId: req.body.eventId,
         imageUrl: req.body.imageUrl,
         title: req.body.title,
         description: req.body.description,
