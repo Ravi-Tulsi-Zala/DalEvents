@@ -43,7 +43,10 @@
 - Now if for example, the user 1 (whose object id is 1 in the database) login the application, the user id matches with the one in the backend and hence the data get's displayed in the user profile page. For eg:- The code mentioned in the user-profile.component.html to extract any feature of the user is:** {userone[1]?.firstname}} ** which is the typescript. 
 
 **Connect to back end**
-- Open the daleventsproject folder and then click the backend folder.On reaching the folder, open cmd and write the command: - **npm install**. Also within the backend folder, time to run the server by the command:- **node.server.js **
+- Open the daleventsproject folder and the open cmd and write the command: - **npm install** .After that, click the backend folder and On reaching the
+- folder, open cmd and write the command: - **npm install**. Then Install Angular by writing the following command on the 
+- command prompt :  npm install -g @angular/cli . Now,  within the backend folder, time to run the server by writing the command:- **node server.js **.
+- This command will let you get connected to the database. 
 
 **Connect to front-end**
 - Make sure the backend is working and after that , go to the root of the project and write on the  command prompt  **ng serve -o**
@@ -63,6 +66,6 @@ Checkout to branch - feature branch - user_profile
 [3]"Angular", Angular.io, 2019. [Online]. Available: https://angular.io/guide/quickstart. [Accessed: 20- Mar- 2019]
 [4]"Welcome to the mean stack", mean, 2019. [Online]. Available: http://mean.io/. [Accessed: 20- Mar- 2019]
 [5]"Afrofuturism: a panel discussion", Dalhousie University, 2019. [Online]. Available: https://www.dal.ca/news/events/2019/03/18/afrofuturism__a_panel_discussion.html. [Accessed: 21- Mar- 2019]
-[6]"University of King’s College Spring Open House", Dalhousie University, 2019. [Online]. Available: https://www.dal.ca/news/events/2019/03/22/university_of_king_s_college_spring_open_house.html. [Accessed: 21- Mar- 2019]
+[6]"University of Kingâ€™s College Spring Open House", Dalhousie University, 2019. [Online]. Available: https://www.dal.ca/news/events/2019/03/22/university_of_king_s_college_spring_open_house.html. [Accessed: 21- Mar- 2019]
 
 
