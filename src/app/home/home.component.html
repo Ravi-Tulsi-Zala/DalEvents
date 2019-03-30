@@ -87,7 +87,10 @@
 
 <!-- Events Layout-->
   <div class="gallery-container cards-container" >
-   	<div class="container" id="noDisplay" *ngIf = "!noError">
+   	<div class="container">
+      <div id="errorDiv"  style="display:none;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: xx-large;color:red">
+        This category has no data in it..!!!
+      </div>
    		<div class="row">
    			<div class="col-md-4" *ngFor = "let d of data;">
    				<div class="transform-on-hover card" >

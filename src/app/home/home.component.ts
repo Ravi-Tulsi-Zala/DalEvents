@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import {Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -13,14 +13,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   private categories: any;
   private subRoute;
   private cardsByCategory: any;
-  private noError : boolean;
+  private noError : boolean=true;
+  private pressed :boolean;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private http: HttpClient,private router:Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       console.log("route changed");
       console.log("params: " + params.s);
+      console.log(this.noError);
       if (params.s) {
         this.searchEventData(params.s);
       }
@@ -57,7 +59,26 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.http.get("http://localhost:3000/events/searchByTag/" + str).subscribe(
       response => {
         console.log(response);
-        this.data = response;
+        this.router.navigateByUrl('/?s=');
+        if(Object.keys(response).length === 0)
+        {
+          
+          this.noError=false;
+          console.log(this.noError);
+         (<HTMLInputElement>document.getElementById("errorDiv")).style.display = "block";
+        }
+        else
+        {
+     
+          this.noError=true;
+          (<HTMLInputElement>document.getElementById("errorDiv")).style.display = "none";
+        
+          console.log(this.noError);
+          this.data = response;
+          
+        }
+        
+       
       }
     )
   }
