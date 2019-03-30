@@ -19,7 +19,9 @@ export class EventDetailsComponent implements OnInit, OnDestroy{
   constructor(private _eventDetailService :EventDetailsService,
     private route: ActivatedRoute) { }
 
+  //This function is called when going to the EventDetails Page
   ngOnInit() {
+    //Get All Events
      this._eventDetailService.getEventDetails()
       .subscribe((response) => {
         this.allEventdetails=response;
@@ -28,11 +30,7 @@ export class EventDetailsComponent implements OnInit, OnDestroy{
         this.similarEvents.push(this.allEventdetails[4]);
         this.similarEvents.push(this.allEventdetails[3]);})
 
-        this._eventDetailService.getParticularEventDetails("9")
-        .subscribe((response) => {
-          this.particularEvent=response;
-          console.log(this.particularEvent);})
-        
+        //When a card is clicked, show the appropriate Event
         this.routeSub =this.route.params.subscribe(params =>{
           console.log(params)
           this.slug=params['slug']

@@ -6,8 +6,10 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+//Service to get Event Details data from DB
 export class EventDetailsService {
 
+  //Link used to connect to Db
   private _url : string ="http://localhost:3000/events/"
 
   constructor(private http:HttpClient) { }
