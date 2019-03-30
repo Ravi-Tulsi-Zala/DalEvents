@@ -30,12 +30,6 @@ export class EventDetailsComponent implements OnInit, OnDestroy{
         this.similarEvents.push(this.allEventdetails[4]);
         this.similarEvents.push(this.allEventdetails[3]);})
 
-        //Get the event that will display over the EventDetails Page
-        this._eventDetailService.getParticularEventDetails("9")
-        .subscribe((response) => {
-          this.particularEvent=response;
-          console.log(this.particularEvent);})
-        
         //When a card is clicked, show the appropriate Event
         this.routeSub =this.route.params.subscribe(params =>{
           console.log(params)

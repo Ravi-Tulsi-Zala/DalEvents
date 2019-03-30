@@ -9,7 +9,7 @@
 <li data-target="#slides" data-slide-to="2"></li>
 </ul>
 
-<!--Images-->
+<!--Carousel-->
 <div class="carousel-inner">
 <div class="carousel-item active">
   <img src="../../assets/images/background.png" alt="backgroud">
@@ -21,22 +21,22 @@
   </div>
 </div>
 <div class="carousel-item">
-    <img src="../../assets/images/background2.png" alt="backgroudTwp">
-    <div class="carousel-caption">
-      <h1 class="display-2">Book Event</h1> 
-      <h3>Details...</h3>
-      <button type="button" class="btn btn-outline-light btn-lg btn-primary w-7" onclick="goto('eventdetail.html')">View</button>
-      <button type="button" class="btn btn-primary btn-lg margin-left w-7">Book Event</button>
-    </div>
-</div>
-<div class="carousel-item">
-  <img src="../../assets/images/background3.png" alt="backgroudThree">
+  <img src="../../assets/images/background2.png" alt="backgroudTwp">
   <div class="carousel-caption">
     <h1 class="display-2">Book Event</h1> 
     <h3>Details...</h3>
     <button type="button" class="btn btn-outline-light btn-lg btn-primary w-7" onclick="goto('eventdetail.html')">View</button>
     <button type="button" class="btn btn-primary btn-lg margin-left w-7">Book Event</button>
   </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../../assets/images/background3.png" alt="backgroudThree">
+      <div class="carousel-caption">
+        <h1 class="display-2">Book Event</h1> 
+        <h3>Details...</h3>
+        <button type="button" class="btn btn-outline-light btn-lg btn-primary w-7" onclick="goto('eventdetail.html')">View</button>
+        <button type="button" class="btn btn-primary btn-lg margin-left w-7">Book Event</button>
+      </div>
 </div>
 </div>
 <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
@@ -92,12 +92,12 @@
    		<div class="row">
    			<div class="col-md-4" *ngFor = "let d of data;">
    				<div class="transform-on-hover card" >
-   					<a class="lightbox" href="#"><img src="{{d.imageUrl}}" class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
+   					<a class="lightbox" href="/event-details/{{d?.eventId}}"><img src="{{d.imageUrl}}" class="card-img-top" style="max-height:200px; width:100%" alt="error loading image"></a>
    					<div class="card-body" style="max-height: 10%">
                <h6>{{d.title}}</h6>
                
                <p class="text-muted card-text max-length" >{{d.description}}</p>
-               <button type="button" class="btn btn-primary">Book Now</button>
+               <a href="/event-details/{{d?.eventId}}"><button type="button" class="btn btn-primary">Book Now</button></a>
    					</div>
    				</div> 
    			</div>
