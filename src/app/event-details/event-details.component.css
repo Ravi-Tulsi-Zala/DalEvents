@@ -203,4 +203,9 @@ margin-bottom:10px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
+.size{
+	width: 450px;
+  height: 350px;
+}
   /* Event Detail Page CSS Ends*/
