@@ -1,4 +1,5 @@
 <!-- Event Detail Page-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <hr class="light">
 <h5 class="text-padding"> Event Details Page</h5>
 <hr class="light">
@@ -13,6 +14,14 @@
                 <hr class="light">
                 <hr class="light">
                 <h5 class="text-padding" >{{particularEvent?.date}}</h5>
+                <hr class="light">
+                <hr class="light">
+                <div class="row text-padding">
+                  <!--"Tryit Editor v3.6", W3schools.com, 2019. [Online]. Available: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_like_dislike. [Accessed: 29- Mar- 2019]-->
+                  <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i> <h5>{{particularEvent?.interested}}</h5>
+                  <div class="col-md-5 text-padding"></div>
+                  <i onclick="myFunction(this)" class="fa fa-thumbs-down"></i><h5>{{particularEvent?.disinterested}}</h5>
+                </div>
                 <hr class="light">
                
             </div>
