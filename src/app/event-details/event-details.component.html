@@ -18,9 +18,9 @@
                 <hr class="light">
                 <div class="row text-padding">
                   <!--"Tryit Editor v3.6", W3schools.com, 2019. [Online]. Available: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_like_dislike. [Accessed: 29- Mar- 2019]-->
-                  <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i> <h5>{{particularEvent?.interested}}</h5>
+                  <i #like id="like" name="like" (click)="manageLike(like.id)" class="fa fa-thumbs-up"></i> <h5>{{particularEvent?.interested}}</h5>
                   <div class="col-md-5 text-padding"></div>
-                  <i onclick="myFunction(this)" class="fa fa-thumbs-down"></i><h5>{{particularEvent?.disinterested}}</h5>
+                  <i #dislike id="dislike" name="dislike" (click)="manageLike(dislike.id)" class="fa fa-thumbs-down"></i><h5>{{particularEvent?.disinterested}}</h5>
                 </div>
                 <hr class="light">
                

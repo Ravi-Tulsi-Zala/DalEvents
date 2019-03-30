@@ -1,6 +1,7 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
 import { EventDetailsService } from './event-details.service';
 import {ActivatedRoute} from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-event-details',
@@ -17,7 +18,8 @@ export class EventDetailsComponent implements OnInit, OnDestroy{
   
 
   constructor(private _eventDetailService :EventDetailsService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private http: HttpClient) { }
 
   //This function is called when going to the EventDetails Page
   ngOnInit() {
@@ -43,6 +45,18 @@ export class EventDetailsComponent implements OnInit, OnDestroy{
 
   ngOnDestroy(){
       this.routeSub.unsubscribe()
+  }
+
+  manageLike(btn){
+    let str :  string = (<HTMLInputElement>document.getElementById(btn)).getAttribute('name');
+    console.log(str);
+
+    // this.http.get("http://localhost:3000/events/searchByTag/" + str).subscribe(
+    //   response => {
+    //     console.log(response);
+    //     this.cardsByCategory = response;
+    //   }
+    // )
   }
 
 }

@@ -18,6 +18,18 @@ router.get('/:eventid',(req,res,next) =>{
     });
 });
 
+router.get('/:eventid/like',(req,res,next) =>{
+    events.updateOne({eventId : req.params.eventid},{like: req.params.like}).then((todos) =>{
+        res.send(todos);
+    }).catch(err =>{
+        console.log(err);
+        res.status(500).json({
+            error: err
+        });
+    });
+});
+
+
 router.get('/search/:searchString', (req, res, next) => {
     let a = req.params.searchString;
     console.log(a);
