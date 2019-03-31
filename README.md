@@ -49,7 +49,7 @@ The purpose of this assignment was to integrate the UI and come up with the fina
 -  Git clone repo using command prompt using command -- **git clone** https://git.cs.dal.ca/jelliott/daleventsproject.git
 - Checkout to branch feature/createEvent using command -- **git  checkout** **feature/createEvent**
 - Check whether you are in correct branch using  --** git branch**
-
+- Install Angular--  npm install -g @angular/cli
 ######Connecting to Backend (Express)Server
 - Navigate to backend folder and run **npm install** in comand promt being in that folder to install the dependecy.
 - Now run **node server.js** to start the server.
