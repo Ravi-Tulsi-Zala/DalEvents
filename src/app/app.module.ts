@@ -14,9 +14,14 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthService } from './login/auth.service';
 import { MatInputModule} from '@angular/material';
+import { MatDialogModule} from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventDetailsService } from './event-details/event-details.service';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +32,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     CreateEventComponent,
     NavComponent,
     FooterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +42,13 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     FormsModule,
     HttpClientModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatCardModule,
+    MatCheckboxModule
   ],
-  providers: [AuthService,EventDetailsService],
+  entryComponents:[CheckoutComponent],
+  providers: [AuthService,EventDetailsService,CheckoutComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

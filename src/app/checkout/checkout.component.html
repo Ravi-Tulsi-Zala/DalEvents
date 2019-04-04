@@ -1,0 +1,42 @@
+<h1>Payment Details</h1>
+<p class="note">Note: This is form is only for academic purposes only. This form will NOT charge your credit card.</p>
+<mat-card>
+    <h3>Card Type:</h3>
+    <mat-checkbox class="padding">Master Card</mat-checkbox>
+    <mat-checkbox class="padding">Visa</mat-checkbox>
+    <mat-checkbox class="padding">Discover</mat-checkbox>
+    <mat-checkbox class="padding">AMEX</mat-checkbox>
+<form>
+    <h3>Card Number:</h3>
+    <mat-form-field>
+      <input matInput maxlength="5"  >
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput maxlength="5">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput maxlength="5">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput maxlength="5">
+    </mat-form-field>
+</form>
+
+<form>
+     <mat-form-field>
+        <input matInput placeholder="Card Holder Name" >
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Expiration Date" maxlength="4">
+        </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="CVV" maxlength="3">
+        </mat-form-field>
+</form>
+</mat-card>
+<mat-dialog-actions>
+    <button (click)="submit()"  type="button" class ="btn btn-primary btn-lg fill">Submit</button>
+</mat-dialog-actions>
+<mat-dialog-actions>
+    <button  (click)="cancel()" type="button" class ="btn btn-lg cancel">Cancel</button>
+</mat-dialog-actions>

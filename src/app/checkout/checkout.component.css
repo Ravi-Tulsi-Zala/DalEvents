@@ -1,0 +1,47 @@
+mat-form-field {
+  padding: 5px;
+}
+
+mat-card{
+  padding: 5px;
+}
+
+.creditcard{
+  background-color: rgb(176, 201, 224)
+}
+
+input{
+  color: 000;
+}
+
+.background {
+  background-color: #FFF;
+}
+
+h1 {
+  text-align: center;
+}
+
+.padding{
+  padding: 5px;
+}
+
+.fill{
+  box-shadow: 0px 2px 10px #B8B8B8;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.cancel{
+  color: white
+}
+
+.note{
+  font-size: 1em;
+  color: red
+}

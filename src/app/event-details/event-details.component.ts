@@ -1,25 +1,30 @@
-import { Component, OnInit,OnDestroy } from '@angular/core';
+import { Component, OnInit,OnDestroy,NgModule } from '@angular/core';
 import { EventDetailsService } from './event-details.service';
 import {ActivatedRoute} from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpClientModule  } from '@angular/common/http';
+import { CheckoutComponent } from '../checkout/checkout.component';
 
 @Component({
   selector: 'app-event-details',
   templateUrl: './event-details.component.html',
   styleUrls: ['./event-details.component.css']
 })
+
 export class EventDetailsComponent implements OnInit, OnDestroy{
 
   public allEventdetails=[];
   public similarEvents=[];
   public particularEvent=[];
+  //public checkout:CheckoutComponent;
   private routeSub:any;
   slug:string;
   
 
   constructor(private _eventDetailService :EventDetailsService,
     private route: ActivatedRoute,
-    private http: HttpClient) { }
+    public checkout:CheckoutComponent,
+    private http: HttpClient,
+    ) { }
 
   //This function is called when going to the EventDetails Page
   ngOnInit() {
@@ -57,6 +62,15 @@ export class EventDetailsComponent implements OnInit, OnDestroy{
     //     this.cardsByCategory = response;
     //   }
     // )
+  }
+
+  registerForEvent(){
+    console.log(this.particularEvent['price'])
+    if (Number(this.particularEvent['price']) >0){
+        this.checkout.openDialog();
+     }else{
+       alert("Thank you for booking the event!")
+     }
   }
 
 }

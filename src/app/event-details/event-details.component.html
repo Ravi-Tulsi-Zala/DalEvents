@@ -26,7 +26,7 @@
                
             </div>
             <div class ="col-sm-7">
-                    <button type="button" class ="btn btn-primary btn-lg">Register For Event</button>
+                    <button (click)="registerForEvent()" type="button" class ="btn btn-primary btn-lg">Register For Event: {{particularEvent?.price | currency}}</button>
                     <hr class="light">
                     <h5>Event Description</h5>
                     <hr class="light">

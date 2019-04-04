@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AuthGuard } from './login/auth.guard';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { CheckoutComponent } from './checkout/checkout.component'
 
 const routes: Routes = [
   {
