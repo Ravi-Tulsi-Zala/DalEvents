@@ -16,6 +16,7 @@ export class CreateEventComponent implements OnInit {
  //dateFormat = require('dateformat');
 public image_url : string;
 public image_name : string;
+public event_Id:string;
 
 public event_date_converted : string;
 url_image: string = '../assets/images/placeholder.png';
@@ -69,9 +70,9 @@ EventRegister(form) {
 //https://angular.io/api/common/formatDate
 
   this.event_date_converted =  formatDate(form.value.event_date, 'EEEE, MMMM d, y, h:mm:ss a', 'en-CA', '');
-
+  this.event_Id=String(Math.floor((Math.random() * 600) + 70))
   const req = this.http.post('http://localhost:3000/events', {
-    eventId: Math.floor((Math.random() * 600) + 70),
+    eventId: this.event_Id,
     imageUrl: this.image_url,
     title: form.value.event_name,
     description: form.value.event_description,
@@ -84,10 +85,11 @@ EventRegister(form) {
         .subscribe(
           res => {
             console.log(res);
-            alert("Event Created....Go back to Homepage")
+            window.location.href = "/event-details/"+this.event_Id;
           },
           err => {
             console.log("Error occured");
+            alert("There is an error in the form");
           }
         );
 
