@@ -1,5 +1,6 @@
 import { Component, OnInit, NgModule, Inject, Optional } from '@angular/core';
 import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA } from '@angular/material';
+import Swal from 'sweetalert2'
 
 
 @Component({
@@ -32,6 +33,11 @@ export class CheckoutComponent implements OnInit {
 
   submit(){
     this.dialog.closeAll();
+    Swal.fire(
+      'Thank You!',
+      'You have successfully Registered for the event!',
+      'success'
+    );
     console.log("Event has been booked!");
   }
 

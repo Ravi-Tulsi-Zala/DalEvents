@@ -3,6 +3,7 @@ import { EventDetailsService } from './event-details.service';
 import {ActivatedRoute} from '@angular/router';
 import { HttpClient,HttpClientModule  } from '@angular/common/http';
 import { CheckoutComponent } from '../checkout/checkout.component';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-event-details',
@@ -69,7 +70,11 @@ export class EventDetailsComponent implements OnInit, OnDestroy{
     if (Number(this.particularEvent['price']) >0){
         this.checkout.openDialog();
      }else{
-       alert("Thank you for booking the event!")
+      Swal.fire(
+        'Thank You!',
+        'You have successfully Registered for the event!',
+        'success'
+      );
      }
   }
 
