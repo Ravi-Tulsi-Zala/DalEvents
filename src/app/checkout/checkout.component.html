@@ -2,10 +2,12 @@
 <p class="note">Note: This is form is only for academic purposes only. This form will NOT charge your credit card.</p>
 <mat-card>
     <h3>Card Type:</h3>
-    <mat-checkbox class="padding">Master Card</mat-checkbox>
-    <mat-checkbox class="padding">Visa</mat-checkbox>
-    <mat-checkbox class="padding">Discover</mat-checkbox>
-    <mat-checkbox class="padding">AMEX</mat-checkbox>
+    <mat-radio-group aria-label="Select an option">
+        <mat-radio-button class="padding" value="1">Master Card</mat-radio-button>
+        <mat-radio-button class="padding" value="2">Visa</mat-radio-button>
+        <mat-radio-button class="padding" value="3">Discover</mat-radio-button>
+        <mat-radio-button class="padding" value="4">AMEX</mat-radio-button>
+    </mat-radio-group>
 <form>
     <h3>Card Number:</h3>
     <mat-form-field>

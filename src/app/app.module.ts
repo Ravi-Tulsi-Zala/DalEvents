@@ -21,6 +21,7 @@ import { EventDetailsService } from './event-details/event-details.service';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     BrowserAnimationsModule,
     MatDialogModule,
     MatCardModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatRadioModule
   ],
   entryComponents:[CheckoutComponent],
   providers: [AuthService,EventDetailsService,CheckoutComponent],
